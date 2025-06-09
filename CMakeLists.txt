@@ -20,16 +20,14 @@ if(MSVC)
         COMMAND ${CMAKE_COMMAND} -E echo "Dumping PE + OBJ info (MSVC)"
         
         # Dumpbin on executable
-        COMMAND cmd /c "dumpbin /DISASM \"$<TARGET_FILE:Optimization_levels>\" > \"${CMAKE_BINARY_DIR}/analysis/Optimization_levels_headers.txt\""
+        COMMAND cmd /c "dumpbin /DISASM \"$<TARGET_FILE:Optimization_levels>\" > \"${CMAKE_BINARY_DIR}/analysis/assembly.txt\""
         DEPENDS Optimization_levels
     )
 else()
     add_custom_command(
-        OUTPUT ${CMAKE_BINARY_DIR}/analysis/Optimization_levels_headers.txt
-               ${CMAKE_BINARY_DIR}/analysis/Optimization_levels_symbols.txt
-               ${CMAKE_BINARY_DIR}/analysis/Optimization_levels_size.txt
+        OUTPUT ${CMAKE_BINARY_DIR}/analysis/assembly.txt
         COMMAND ${CMAKE_COMMAND} -E echo "Dumping ELF info (Unix)"
-        COMMAND -d -M intel "$<TARGET_FILE:Optimization_levels>" > "${CMAKE_BINARY_DIR}/analysis/Optimization_levels_headers.txt"
+        COMMAND -d -M intel "$<TARGET_FILE:Optimization_levels>" > "${CMAKE_BINARY_DIR}/analysis/assembly.txt"
         DEPENDS Optimization_levels
 
     )
