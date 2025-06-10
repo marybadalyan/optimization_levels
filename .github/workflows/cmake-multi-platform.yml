@@ -96,7 +96,7 @@ jobs:
           if [ "$RUNNER_OS" == "Windows" ]; then
             executable_name="${{ matrix.build_type }}/${exe}.exe"
           else
-            executable_name="${exe}.exe"
+            executable_name="${exe}"
           fi
 
           echo "Checking for executable: ${executable_name}"
