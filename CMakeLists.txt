@@ -43,26 +43,17 @@ if(MSVC)
         DEPENDS OP_level_2
     )
 else()
-    # Create a separate custom command for each analysis file
-
-    # Command to generate assembly for OP_level_1 (-O0)
     add_custom_command(
-        OUTPUT ${ANALYSIS_DIR}/assembly_O0.txt
+        TARGET OP_level_1
+        POST_BUILD
         COMMAND objdump -d -M intel "$<TARGET_FILE:OP_level_1>" > "${ANALYSIS_DIR}/assembly_O0.txt"
-        DEPENDS OP_level_1
-        COMMENT "Generating assembly for -O0..."
+        COMMENT "Generating assembly for -O0 (${ANALYSIS_DIR}/assembly_O0.txt)"
     )
-    # A target is needed to drive the command
-    add_custom_target(generate_asm_O0 ALL DEPENDS ${ANALYSIS_DIR}/assembly_O0.txt)
 
-
-    # Command to generate assembly for OP_level_2 (-O2)
     add_custom_command(
-        OUTPUT ${ANALYSIS_DIR}/assembly_O2.txt
+        TARGET OP_level_2
+        POST_BUILD
         COMMAND objdump -d -M intel "$<TARGET_FILE:OP_level_2>" > "${ANALYSIS_DIR}/assembly_O2.txt"
-        DEPENDS OP_level_2
-        COMMENT "Generating assembly for -O2..."
+        COMMENT "Generating assembly for -O2 (${ANALYSIS_DIR}/assembly_O2.txt)"
     )
-    # A target is needed to drive the command
-    add_custom_target(generate_asm_O2 ALL DEPENDS ${ANALYSIS_DIR}/assembly_O2.txt)
 endif()
