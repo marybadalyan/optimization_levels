@@ -33,7 +33,6 @@ The project uses a two-stage process orchestrated by `CMake` and the C++ executa
     * Finally, it prints the measured time and the precise instruction count for just the `run()` function.
 This two-step process allows the project to focus on the performance and assembly characteristics of the `run()` function, providing a clear and direct comparison between the two optimization levels without cluttering the output with unrelated assembly code.
 ### Project Structure
-```
 
 ### 3. GitHub Actions CI (cmake-multi-platform.yml):
 
@@ -43,6 +42,7 @@ This two-step process allows the project to focus on the performance and assembl
 
 ### Example Output
 When you run the project, the workflow will execute both the unoptimized and optimized versions. The output provides a clear comparison between the two.
+
 ```
 Running OP_level_1...
 Sum: 1e+08
