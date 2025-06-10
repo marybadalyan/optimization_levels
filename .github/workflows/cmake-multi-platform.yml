@@ -95,9 +95,9 @@ jobs:
         for exe in "${executables[@]}"; do
           if [ "$RUNNER_OS" == "Windows" ]; then
             executable="${exe}.exe"
-            executable_path="${{ steps.strings.outputs.build-output-dir }}/${{ matrix.build_type }}/${executable}"
+            executable_path="${{ github.workspace }}\\build\\${{ matrix.build_type }}\\$executable"
           else
-            executable_path="${{ steps.strings.outputs.build-output-dir }}/${exe}"
+            executable_path="${{ github.workspace }}/build/$executable"  # For Linux/Ubuntu
           fi
 
           echo "Checking if executable exists: $executable_path"

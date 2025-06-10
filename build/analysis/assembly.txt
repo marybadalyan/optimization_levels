@@ -3054,7 +3054,7 @@ main:
   00000000000002A0: 45 33 C0           xor         r8d,r8d
   00000000000002A3: BA 02 00 00 00     mov         edx,2
   00000000000002A8: FF 15 00 00 00 00  call        qword ptr [__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z]
-  00000000000002AE: 48 8D 15 00 00 00  lea         rdx,[??_C@_0DG@JKLFGHDH@Total?5instructions?5in?5run?$CI?$CJ?5fun@]
+  00000000000002AE: 48 8D 15 00 00 00  lea         rdx,[??_C@_0DA@JNNIMLMI@Total?5instructions?5in?5run?$CI?$CJ?5fun@]
                     00
   00000000000002B5: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
@@ -3139,7 +3139,7 @@ main$dtor$1:
           A0 .debug$S
          13D .drectve
          33C .pdata
-         252 .rdata
+         24C .rdata
          4CC .rdata$r
         26E4 .text$mn
          1A2 .text$x
