@@ -4,15 +4,19 @@ project(Optimization_levels)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+
+add_executable(OP_level_1 main.cpp)
+add_executable(OP_level_2 main.cpp)
+
 if(MSVC)
-    add_executable(OP_level_1 main.cpp)
+    # Windows/MSVC specific flags
     target_compile_options(OP_level_1 PRIVATE /O1)
-
-    add_executable(OP_level_2 main.cpp)
     target_compile_options(OP_level_2 PRIVATE /O2)
-
 else()
-    add_compile_options(-O2)
+    # Linux/GCC/Clang specific flags
+    target_compile_options(OP_level_1 PRIVATE -O1)
+    target_compile_options(OP_level_2 PRIVATE -O2)
 endif()
 
 
