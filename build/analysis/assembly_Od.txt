@@ -7,533 +7,650 @@ Dump of file C:\Users\MeriBadalyan\optimization_levels\build\OP_level_1.dir\Rele
 File Type: COFF OBJECT
 
 ?run@@YAHXZ (int __cdecl run(void)):
-  0000000000000000: 48 81 EC A8 00 00  sub         rsp,0A8h
+  0000000000000000: 48 81 EC B8 00 00  sub         rsp,0B8h
                     00
-  0000000000000007: 48 C7 84 24 90 00  mov         qword ptr [rsp+90h],5F5E100h
+  0000000000000007: 48 C7 84 24 98 00  mov         qword ptr [rsp+98h],5F5E100h
                     00 00 00 E1 F5 05
   0000000000000013: 48 8D 44 24 20     lea         rax,[rsp+20h]
   0000000000000018: 48 89 44 24 48     mov         qword ptr [rsp+48h],rax
   000000000000001D: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
-  0000000000000022: 48 89 84 24 98 00  mov         qword ptr [rsp+98h],rax
+  0000000000000022: 48 89 84 24 A0 00  mov         qword ptr [rsp+0A0h],rax
                     00 00
   000000000000002A: F2 0F 10 05 00 00  movsd       xmm0,mmword ptr [__real@3ff0000000000000]
                     00 00
   0000000000000032: F2 0F 11 44 24 58  movsd       mmword ptr [rsp+58h],xmm0
-  0000000000000038: 48 8D 44 24 78     lea         rax,[rsp+78h]
-  000000000000003D: 48 89 44 24 50     mov         qword ptr [rsp+50h],rax
-  0000000000000042: 48 8B 44 24 50     mov         rax,qword ptr [rsp+50h]
-  0000000000000047: 48 89 44 24 38     mov         qword ptr [rsp+38h],rax
-  000000000000004C: 48 8B 44 24 38     mov         rax,qword ptr [rsp+38h]
-  0000000000000051: 48 C7 00 00 00 00  mov         qword ptr [rax],0
+  0000000000000038: 48 8D 84 24 80 00  lea         rax,[rsp+80h]
+                    00 00
+  0000000000000040: 48 89 44 24 50     mov         qword ptr [rsp+50h],rax
+  0000000000000045: 48 8B 44 24 50     mov         rax,qword ptr [rsp+50h]
+  000000000000004A: 48 89 44 24 38     mov         qword ptr [rsp+38h],rax
+  000000000000004F: 48 8B 44 24 38     mov         rax,qword ptr [rsp+38h]
+  0000000000000054: 48 C7 00 00 00 00  mov         qword ptr [rax],0
                     00
-  0000000000000058: 48 8B 44 24 38     mov         rax,qword ptr [rsp+38h]
-  000000000000005D: 48 C7 40 08 00 00  mov         qword ptr [rax+8],0
+  000000000000005B: 48 8B 44 24 38     mov         rax,qword ptr [rsp+38h]
+  0000000000000060: 48 C7 40 08 00 00  mov         qword ptr [rax+8],0
                     00 00
-  0000000000000065: 48 8B 44 24 38     mov         rax,qword ptr [rsp+38h]
-  000000000000006A: 48 C7 40 10 00 00  mov         qword ptr [rax+10h],0
+  0000000000000068: 48 8B 44 24 38     mov         rax,qword ptr [rsp+38h]
+  000000000000006D: 48 C7 40 10 00 00  mov         qword ptr [rax+10h],0
                     00 00
-  0000000000000072: 4C 8D 44 24 58     lea         r8,[rsp+58h]
-  0000000000000077: BA 00 E1 F5 05     mov         edx,5F5E100h
-  000000000000007C: 48 8D 4C 24 78     lea         rcx,[rsp+78h]
-  0000000000000081: E8 00 00 00 00     call        ??$_Construct_n@AEBN@?$vector@NV?$allocator@N@std@@@std@@AEAAX_KAEBN@Z
-  0000000000000086: 90                 nop
-  0000000000000087: 0F 57 C0           xorps       xmm0,xmm0
-  000000000000008A: F2 0F 11 44 24 40  movsd       mmword ptr [rsp+40h],xmm0
-  0000000000000090: 48 C7 44 24 28 00  mov         qword ptr [rsp+28h],0
+  0000000000000075: 4C 8D 44 24 58     lea         r8,[rsp+58h]
+  000000000000007A: BA 00 E1 F5 05     mov         edx,5F5E100h
+  000000000000007F: 48 8D 8C 24 80 00  lea         rcx,[rsp+80h]
+                    00 00
+  0000000000000087: E8 00 00 00 00     call        ??$_Construct_n@AEBN@?$vector@NV?$allocator@N@std@@@std@@AEAAX_KAEBN@Z
+  000000000000008C: 90                 nop
+  000000000000008D: 0F 57 C0           xorps       xmm0,xmm0
+  0000000000000090: F2 0F 11 44 24 40  movsd       mmword ptr [rsp+40h],xmm0
+  0000000000000096: 48 C7 44 24 28 00  mov         qword ptr [rsp+28h],0
                     00 00 00
-  0000000000000099: EB 0D              jmp         00000000000000A8
-  000000000000009B: 48 8B 44 24 28     mov         rax,qword ptr [rsp+28h]
-  00000000000000A0: 48 FF C0           inc         rax
-  00000000000000A3: 48 89 44 24 28     mov         qword ptr [rsp+28h],rax
-  00000000000000A8: 48 81 7C 24 28 00  cmp         qword ptr [rsp+28h],5F5E100h
+  000000000000009F: EB 0D              jmp         00000000000000AE
+  00000000000000A1: 48 8B 44 24 28     mov         rax,qword ptr [rsp+28h]
+  00000000000000A6: 48 FF C0           inc         rax
+  00000000000000A9: 48 89 44 24 28     mov         qword ptr [rsp+28h],rax
+  00000000000000AE: 48 81 7C 24 28 00  cmp         qword ptr [rsp+28h],5F5E100h
                     E1 F5 05
-  00000000000000B1: 73 37              jae         00000000000000EA
-  00000000000000B3: 48 8D 44 24 78     lea         rax,[rsp+78h]
-  00000000000000B8: 48 89 44 24 60     mov         qword ptr [rsp+60h],rax
-  00000000000000BD: 48 8B 44 24 60     mov         rax,qword ptr [rsp+60h]
-  00000000000000C2: 48 8B 00           mov         rax,qword ptr [rax]
-  00000000000000C5: 48 8B 4C 24 28     mov         rcx,qword ptr [rsp+28h]
-  00000000000000CA: 48 8D 04 C8        lea         rax,[rax+rcx*8]
-  00000000000000CE: 48 89 44 24 68     mov         qword ptr [rsp+68h],rax
-  00000000000000D3: 48 8B 44 24 68     mov         rax,qword ptr [rsp+68h]
-  00000000000000D8: F2 0F 10 44 24 40  movsd       xmm0,mmword ptr [rsp+40h]
-  00000000000000DE: F2 0F 58 00        addsd       xmm0,mmword ptr [rax]
-  00000000000000E2: F2 0F 11 44 24 40  movsd       mmword ptr [rsp+40h],xmm0
-  00000000000000E8: EB B1              jmp         000000000000009B
-  00000000000000EA: 48 8D 15 00 00 00  lea         rdx,[$SG83725]
-                    00
-  00000000000000F1: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
-                    00
-  00000000000000F8: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000000FD: 48 89 44 24 70     mov         qword ptr [rsp+70h],rax
-  0000000000000102: F2 0F 10 4C 24 40  movsd       xmm1,mmword ptr [rsp+40h]
-  0000000000000108: 48 8B 4C 24 70     mov         rcx,qword ptr [rsp+70h]
-  000000000000010D: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@N@Z]
-  0000000000000113: 48 8D 15 00 00 00  lea         rdx,[$SG83724]
-                    00
-  000000000000011A: 48 8B C8           mov         rcx,rax
-  000000000000011D: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  0000000000000122: 90                 nop
-  0000000000000123: C7 44 24 30 00 00  mov         dword ptr [rsp+30h],0
+  00000000000000B7: 73 3A              jae         00000000000000F3
+  00000000000000B9: 48 8D 84 24 80 00  lea         rax,[rsp+80h]
                     00 00
-  000000000000012B: 48 8D 4C 24 78     lea         rcx,[rsp+78h]
-  0000000000000130: E8 00 00 00 00     call        ?_Tidy@?$vector@NV?$allocator@N@std@@@std@@AEAAXXZ
-  0000000000000135: 90                 nop
-  0000000000000136: 8B 44 24 30        mov         eax,dword ptr [rsp+30h]
-  000000000000013A: 48 81 C4 A8 00 00  add         rsp,0A8h
+  00000000000000C1: 48 89 44 24 60     mov         qword ptr [rsp+60h],rax
+  00000000000000C6: 48 8B 44 24 60     mov         rax,qword ptr [rsp+60h]
+  00000000000000CB: 48 8B 00           mov         rax,qword ptr [rax]
+  00000000000000CE: 48 8B 4C 24 28     mov         rcx,qword ptr [rsp+28h]
+  00000000000000D3: 48 8D 04 C8        lea         rax,[rax+rcx*8]
+  00000000000000D7: 48 89 44 24 68     mov         qword ptr [rsp+68h],rax
+  00000000000000DC: 48 8B 44 24 68     mov         rax,qword ptr [rsp+68h]
+  00000000000000E1: F2 0F 10 44 24 40  movsd       xmm0,mmword ptr [rsp+40h]
+  00000000000000E7: F2 0F 58 00        addsd       xmm0,mmword ptr [rax]
+  00000000000000EB: F2 0F 11 44 24 40  movsd       mmword ptr [rsp+40h],xmm0
+  00000000000000F1: EB AE              jmp         00000000000000A1
+  00000000000000F3: 48 8D 15 00 00 00  lea         rdx,[$SG83739]
                     00
-  0000000000000141: C3                 ret
-  0000000000000142: CC                 int         3
-  0000000000000143: CC                 int         3
-  0000000000000144: CC                 int         3
-  0000000000000145: CC                 int         3
-  0000000000000146: CC                 int         3
-  0000000000000147: CC                 int         3
-  0000000000000148: CC                 int         3
-  0000000000000149: CC                 int         3
-  000000000000014A: CC                 int         3
-  000000000000014B: CC                 int         3
-  000000000000014C: CC                 int         3
-  000000000000014D: CC                 int         3
-  000000000000014E: CC                 int         3
-  000000000000014F: CC                 int         3
+  00000000000000FA: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+                    00
+  0000000000000101: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  0000000000000106: 48 89 44 24 70     mov         qword ptr [rsp+70h],rax
+  000000000000010B: F2 0F 10 4C 24 40  movsd       xmm1,mmword ptr [rsp+40h]
+  0000000000000111: 48 8B 4C 24 70     mov         rcx,qword ptr [rsp+70h]
+  0000000000000116: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@N@Z]
+  000000000000011C: 48 89 44 24 78     mov         qword ptr [rsp+78h],rax
+  0000000000000121: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
+                    00
+  0000000000000128: 48 8B 4C 24 78     mov         rcx,qword ptr [rsp+78h]
+  000000000000012D: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  0000000000000133: 90                 nop
+  0000000000000134: C7 44 24 30 00 00  mov         dword ptr [rsp+30h],0
+                    00 00
+  000000000000013C: 48 8D 8C 24 80 00  lea         rcx,[rsp+80h]
+                    00 00
+  0000000000000144: E8 00 00 00 00     call        ?_Tidy@?$vector@NV?$allocator@N@std@@@std@@AEAAXXZ
+  0000000000000149: 90                 nop
+  000000000000014A: 8B 44 24 30        mov         eax,dword ptr [rsp+30h]
+  000000000000014E: 48 81 C4 B8 00 00  add         rsp,0B8h
+                    00
+  0000000000000155: C3                 ret
+  0000000000000156: CC                 int         3
+  0000000000000157: CC                 int         3
+  0000000000000158: CC                 int         3
+  0000000000000159: CC                 int         3
+  000000000000015A: CC                 int         3
+  000000000000015B: CC                 int         3
+  000000000000015C: CC                 int         3
+  000000000000015D: CC                 int         3
+  000000000000015E: CC                 int         3
+  000000000000015F: CC                 int         3
 main:
-  0000000000000150: 48 89 54 24 10     mov         qword ptr [rsp+10h],rdx
-  0000000000000155: 89 4C 24 08        mov         dword ptr [rsp+8],ecx
-  0000000000000159: 48 81 EC C8 02 00  sub         rsp,2C8h
+  0000000000000160: 48 89 54 24 10     mov         qword ptr [rsp+10h],rdx
+  0000000000000165: 89 4C 24 08        mov         dword ptr [rsp+8],ecx
+  0000000000000169: 48 81 EC 08 03 00  sub         rsp,308h
                     00
-  0000000000000160: 48 8B 05 00 00 00  mov         rax,qword ptr [__security_cookie]
+  0000000000000170: 48 8B 05 00 00 00  mov         rax,qword ptr [__security_cookie]
                     00
-  0000000000000167: 48 33 C4           xor         rax,rsp
-  000000000000016A: 48 89 84 24 B0 02  mov         qword ptr [rsp+2B0h],rax
+  0000000000000177: 48 33 C4           xor         rax,rsp
+  000000000000017A: 48 89 84 24 F0 02  mov         qword ptr [rsp+2F0h],rax
                     00 00
-  0000000000000172: 48 8D 4C 24 50     lea         rcx,[rsp+50h]
-  0000000000000177: E8 00 00 00 00     call        ?now@steady_clock@chrono@std@@SA?AV?$time_point@Usteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@23@@23@XZ
-  000000000000017C: E8 00 00 00 00     call        ?run@@YAHXZ
-  0000000000000181: 48 8D 4C 24 68     lea         rcx,[rsp+68h]
-  0000000000000186: E8 00 00 00 00     call        ?now@steady_clock@chrono@std@@SA?AV?$time_point@Usteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@23@@23@XZ
-  000000000000018B: 90                 nop
-  000000000000018C: 48 8B 44 24 50     mov         rax,qword ptr [rsp+50h]
-  0000000000000191: 48 89 44 24 58     mov         qword ptr [rsp+58h],rax
-  0000000000000196: 48 8D 44 24 58     lea         rax,[rsp+58h]
-  000000000000019B: 48 89 44 24 60     mov         qword ptr [rsp+60h],rax
-  00000000000001A0: 48 8B 44 24 60     mov         rax,qword ptr [rsp+60h]
-  00000000000001A5: 48 89 84 24 80 00  mov         qword ptr [rsp+80h],rax
+  0000000000000182: 83 BC 24 10 03 00  cmp         dword ptr [rsp+310h],3
+                    00 03
+  000000000000018A: 7D 1D              jge         00000000000001A9
+  000000000000018C: 48 8D 15 00 00 00  lea         rdx,[$SG84251]
+                    00
+  0000000000000193: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+                    00
+  000000000000019A: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  000000000000019F: B8 01 00 00 00     mov         eax,1
+  00000000000001A4: E9 B9 06 00 00     jmp         0000000000000862
+  00000000000001A9: B8 08 00 00 00     mov         eax,8
+  00000000000001AE: 48 6B C0 01        imul        rax,rax,1
+  00000000000001B2: 48 8B 8C 24 18 03  mov         rcx,qword ptr [rsp+318h]
                     00 00
-  00000000000001AD: 48 8B 44 24 68     mov         rax,qword ptr [rsp+68h]
-  00000000000001B2: 48 89 44 24 70     mov         qword ptr [rsp+70h],rax
-  00000000000001B7: 48 8D 44 24 70     lea         rax,[rsp+70h]
-  00000000000001BC: 48 89 44 24 78     mov         qword ptr [rsp+78h],rax
-  00000000000001C1: 48 8B 44 24 78     mov         rax,qword ptr [rsp+78h]
-  00000000000001C6: 48 89 84 24 88 00  mov         qword ptr [rsp+88h],rax
+  00000000000001BA: 48 8B 14 01        mov         rdx,qword ptr [rcx+rax]
+  00000000000001BE: 48 8D 8C 24 90 02  lea         rcx,[rsp+290h]
                     00 00
-  00000000000001CE: 4C 8B 84 24 80 00  mov         r8,qword ptr [rsp+80h]
+  00000000000001C6: E8 00 00 00 00     call        ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z
+  00000000000001CB: 90                 nop
+  00000000000001CC: B8 08 00 00 00     mov         eax,8
+  00000000000001D1: 48 6B C0 02        imul        rax,rax,2
+  00000000000001D5: 48 8B 8C 24 18 03  mov         rcx,qword ptr [rsp+318h]
                     00 00
-  00000000000001D6: 48 8B 94 24 88 00  mov         rdx,qword ptr [rsp+88h]
+  00000000000001DD: 48 8B 14 01        mov         rdx,qword ptr [rcx+rax]
+  00000000000001E1: 48 8D 8C 24 B0 02  lea         rcx,[rsp+2B0h]
                     00 00
-  00000000000001DE: 48 8D 8C 24 90 00  lea         rcx,[rsp+90h]
+  00000000000001E9: E8 00 00 00 00     call        ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z
+  00000000000001EE: 90                 nop
+  00000000000001EF: 48 8D 4C 24 50     lea         rcx,[rsp+50h]
+  00000000000001F4: E8 00 00 00 00     call        ?now@steady_clock@chrono@std@@SA?AV?$time_point@Usteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@23@@23@XZ
+  00000000000001F9: E8 00 00 00 00     call        ?run@@YAHXZ
+  00000000000001FE: 48 8D 4C 24 68     lea         rcx,[rsp+68h]
+  0000000000000203: E8 00 00 00 00     call        ?now@steady_clock@chrono@std@@SA?AV?$time_point@Usteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@23@@23@XZ
+  0000000000000208: 90                 nop
+  0000000000000209: 48 8B 44 24 50     mov         rax,qword ptr [rsp+50h]
+  000000000000020E: 48 89 44 24 58     mov         qword ptr [rsp+58h],rax
+  0000000000000213: 48 8D 44 24 58     lea         rax,[rsp+58h]
+  0000000000000218: 48 89 44 24 60     mov         qword ptr [rsp+60h],rax
+  000000000000021D: 48 8B 44 24 60     mov         rax,qword ptr [rsp+60h]
+  0000000000000222: 48 89 84 24 80 00  mov         qword ptr [rsp+80h],rax
                     00 00
-  00000000000001E6: E8 00 00 00 00     call        ??$?G_JU?$ratio@$00$0DLJKMKAA@@std@@_JU01@@chrono@std@@YA?AV?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@01@AEBV201@0@Z
-  00000000000001EB: 48 8D 84 24 90 00  lea         rax,[rsp+90h]
+  000000000000022A: 48 8B 44 24 68     mov         rax,qword ptr [rsp+68h]
+  000000000000022F: 48 89 44 24 70     mov         qword ptr [rsp+70h],rax
+  0000000000000234: 48 8D 44 24 70     lea         rax,[rsp+70h]
+  0000000000000239: 48 89 44 24 78     mov         qword ptr [rsp+78h],rax
+  000000000000023E: 48 8B 44 24 78     mov         rax,qword ptr [rsp+78h]
+  0000000000000243: 48 89 84 24 88 00  mov         qword ptr [rsp+88h],rax
                     00 00
-  00000000000001F3: 48 89 84 24 98 00  mov         qword ptr [rsp+98h],rax
+  000000000000024B: 4C 8B 84 24 80 00  mov         r8,qword ptr [rsp+80h]
                     00 00
-  00000000000001FB: 48 8B 94 24 98 00  mov         rdx,qword ptr [rsp+98h]
+  0000000000000253: 48 8B 94 24 88 00  mov         rdx,qword ptr [rsp+88h]
                     00 00
-  0000000000000203: 48 8D 8C 24 30 01  lea         rcx,[rsp+130h]
+  000000000000025B: 48 8D 8C 24 90 00  lea         rcx,[rsp+90h]
                     00 00
-  000000000000020B: E8 00 00 00 00     call        ??$duration_cast@V?$duration@NU?$ratio@$00$00@std@@@chrono@std@@_JU?$ratio@$00$0DLJKMKAA@@3@$0A@@chrono@std@@YA?AV?$duration@NU?$ratio@$00$00@std@@@01@AEBV?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@01@@Z
-  0000000000000210: 48 89 84 24 A0 00  mov         qword ptr [rsp+0A0h],rax
+  0000000000000263: E8 00 00 00 00     call        ??$?G_JU?$ratio@$00$0DLJKMKAA@@std@@_JU01@@chrono@std@@YA?AV?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@01@AEBV201@0@Z
+  0000000000000268: 48 8D 84 24 90 00  lea         rax,[rsp+90h]
                     00 00
-  0000000000000218: 48 8B 84 24 A0 00  mov         rax,qword ptr [rsp+0A0h]
+  0000000000000270: 48 89 84 24 98 00  mov         qword ptr [rsp+98h],rax
                     00 00
-  0000000000000220: F2 0F 10 00        movsd       xmm0,mmword ptr [rax]
-  0000000000000224: F2 0F 11 84 24 A8  movsd       mmword ptr [rsp+0A8h],xmm0
+  0000000000000278: 48 8B 94 24 98 00  mov         rdx,qword ptr [rsp+98h]
+                    00 00
+  0000000000000280: 48 8D 8C 24 58 01  lea         rcx,[rsp+158h]
+                    00 00
+  0000000000000288: E8 00 00 00 00     call        ??$duration_cast@V?$duration@NU?$ratio@$00$00@std@@@chrono@std@@_JU?$ratio@$00$0DLJKMKAA@@3@$0A@@chrono@std@@YA?AV?$duration@NU?$ratio@$00$00@std@@@01@AEBV?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@01@@Z
+  000000000000028D: 48 89 84 24 A0 00  mov         qword ptr [rsp+0A0h],rax
+                    00 00
+  0000000000000295: 48 8B 84 24 A0 00  mov         rax,qword ptr [rsp+0A0h]
+                    00 00
+  000000000000029D: F2 0F 10 00        movsd       xmm0,mmword ptr [rax]
+  00000000000002A1: F2 0F 11 84 24 A8  movsd       mmword ptr [rsp+0A8h],xmm0
                     00 00 00
-  000000000000022D: F2 0F 10 84 24 A8  movsd       xmm0,mmword ptr [rsp+0A8h]
+  00000000000002AA: F2 0F 10 84 24 A8  movsd       xmm0,mmword ptr [rsp+0A8h]
                     00 00 00
-  0000000000000236: F2 0F 11 84 24 E0  movsd       mmword ptr [rsp+0E0h],xmm0
+  00000000000002B3: F2 0F 11 84 24 E0  movsd       mmword ptr [rsp+0E0h],xmm0
                     00 00 00
-  000000000000023F: 83 BC 24 D0 02 00  cmp         dword ptr [rsp+2D0h],2
-                    00 02
-  0000000000000247: 7D 1D              jge         0000000000000266
-  0000000000000249: 48 8D 15 00 00 00  lea         rdx,[$SG84244]
+  00000000000002BC: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_CYAN@Color@@3PEBDEB]
                     00
-  0000000000000250: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  00000000000002C3: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  0000000000000257: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  000000000000025C: B8 01 00 00 00     mov         eax,1
-  0000000000000261: E9 B4 04 00 00     jmp         000000000000071A
-  0000000000000266: B8 08 00 00 00     mov         eax,8
-  000000000000026B: 48 6B C0 01        imul        rax,rax,1
-  000000000000026F: 48 8B 8C 24 D8 02  mov         rcx,qword ptr [rsp+2D8h]
-                    00 00
-  0000000000000277: 48 8B 14 01        mov         rdx,qword ptr [rcx+rax]
-  000000000000027B: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
-                    00 00
-  0000000000000283: E8 00 00 00 00     call        ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z
-  0000000000000288: 90                 nop
-  0000000000000289: B8 08 00 00 00     mov         eax,8
-  000000000000028E: 48 6B C0 02        imul        rax,rax,2
-  0000000000000292: 48 8B 8C 24 D8 02  mov         rcx,qword ptr [rsp+2D8h]
-                    00 00
-  000000000000029A: 48 8B 14 01        mov         rdx,qword ptr [rcx+rax]
-  000000000000029E: 48 8D 8C 24 90 02  lea         rcx,[rsp+290h]
-                    00 00
-  00000000000002A6: E8 00 00 00 00     call        ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z
-  00000000000002AB: 90                 nop
-  00000000000002AC: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_CYAN@Color@@3PEBDEB]
+  00000000000002CA: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000002CF: 48 8D 15 00 00 00  lea         rdx,[$SG84252]
                     00
-  00000000000002B3: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
-                    00
-  00000000000002BA: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000002BF: 48 8D 15 00 00 00  lea         rdx,[$SG84245]
-                    00
-  00000000000002C6: 48 8B C8           mov         rcx,rax
-  00000000000002C9: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000002CE: 48 8D 94 24 70 02  lea         rdx,[rsp+270h]
-                    00 00
   00000000000002D6: 48 8B C8           mov         rcx,rax
-  00000000000002D9: E8 00 00 00 00     call        ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
-  00000000000002DE: 48 89 84 24 B8 00  mov         qword ptr [rsp+0B8h],rax
+  00000000000002D9: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000002DE: 48 8D 94 24 90 02  lea         rdx,[rsp+290h]
                     00 00
-  00000000000002E6: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
+  00000000000002E6: 48 8B C8           mov         rcx,rax
+  00000000000002E9: E8 00 00 00 00     call        ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
+  00000000000002EE: 48 89 84 24 B8 00  mov         qword ptr [rsp+0B8h],rax
+                    00 00
+  00000000000002F6: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
                     00
-  00000000000002ED: 48 89 84 24 B0 00  mov         qword ptr [rsp+0B0h],rax
+  00000000000002FD: 48 89 84 24 B0 00  mov         qword ptr [rsp+0B0h],rax
                     00 00
-  00000000000002F5: 48 8B 94 24 B0 00  mov         rdx,qword ptr [rsp+0B0h]
+  0000000000000305: 48 8B 94 24 B0 00  mov         rdx,qword ptr [rsp+0B0h]
                     00 00
-  00000000000002FD: 48 8B 8C 24 B8 00  mov         rcx,qword ptr [rsp+0B8h]
+  000000000000030D: 48 8B 8C 24 B8 00  mov         rcx,qword ptr [rsp+0B8h]
                     00 00
-  0000000000000305: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  000000000000030A: 48 89 84 24 C0 00  mov         qword ptr [rsp+0C0h],rax
+  0000000000000315: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  000000000000031A: 48 89 84 24 C0 00  mov         qword ptr [rsp+0C0h],rax
                     00 00
-  0000000000000312: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
+  0000000000000322: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
                     00
-  0000000000000319: 48 8B 8C 24 C0 00  mov         rcx,qword ptr [rsp+0C0h]
+  0000000000000329: 48 8B 8C 24 C0 00  mov         rcx,qword ptr [rsp+0C0h]
                     00 00
-  0000000000000321: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
-  0000000000000327: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_MAGENTA@Color@@3PEBDEB]
+  0000000000000331: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  0000000000000337: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_MAGENTA@Color@@3PEBDEB]
                     00
-  000000000000032E: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  000000000000033E: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  0000000000000335: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  000000000000033A: 48 8D 15 00 00 00  lea         rdx,[$SG84246]
+  0000000000000345: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  000000000000034A: 48 8D 15 00 00 00  lea         rdx,[$SG84253]
                     00
-  0000000000000341: 48 8B C8           mov         rcx,rax
-  0000000000000344: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  0000000000000349: 48 8D 94 24 90 02  lea         rdx,[rsp+290h]
-                    00 00
   0000000000000351: 48 8B C8           mov         rcx,rax
-  0000000000000354: E8 00 00 00 00     call        ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
-  0000000000000359: 48 89 84 24 D0 00  mov         qword ptr [rsp+0D0h],rax
+  0000000000000354: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  0000000000000359: 48 8D 94 24 B0 02  lea         rdx,[rsp+2B0h]
                     00 00
-  0000000000000361: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
+  0000000000000361: 48 8B C8           mov         rcx,rax
+  0000000000000364: E8 00 00 00 00     call        ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
+  0000000000000369: 48 89 84 24 D0 00  mov         qword ptr [rsp+0D0h],rax
+                    00 00
+  0000000000000371: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
                     00
-  0000000000000368: 48 89 84 24 C8 00  mov         qword ptr [rsp+0C8h],rax
+  0000000000000378: 48 89 84 24 C8 00  mov         qword ptr [rsp+0C8h],rax
                     00 00
-  0000000000000370: 48 8B 94 24 C8 00  mov         rdx,qword ptr [rsp+0C8h]
+  0000000000000380: 48 8B 94 24 C8 00  mov         rdx,qword ptr [rsp+0C8h]
                     00 00
-  0000000000000378: 48 8B 8C 24 D0 00  mov         rcx,qword ptr [rsp+0D0h]
+  0000000000000388: 48 8B 8C 24 D0 00  mov         rcx,qword ptr [rsp+0D0h]
                     00 00
-  0000000000000380: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  0000000000000385: 48 89 84 24 D8 00  mov         qword ptr [rsp+0D8h],rax
+  0000000000000390: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  0000000000000395: 48 89 84 24 D8 00  mov         qword ptr [rsp+0D8h],rax
                     00 00
-  000000000000038D: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
+  000000000000039D: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
                     00
-  0000000000000394: 48 8B 8C 24 D8 00  mov         rcx,qword ptr [rsp+0D8h]
+  00000000000003A4: 48 8B 8C 24 D8 00  mov         rcx,qword ptr [rsp+0D8h]
                     00 00
-  000000000000039C: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
-  00000000000003A2: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_YELLOW@Color@@3PEBDEB]
+  00000000000003AC: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  00000000000003B2: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_YELLOW@Color@@3PEBDEB]
                     00
-  00000000000003A9: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  00000000000003B9: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  00000000000003B0: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000003B5: 48 8D 15 00 00 00  lea         rdx,[$SG84248]
+  00000000000003C0: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000003C5: 48 8D 15 00 00 00  lea         rdx,[$SG84255]
                     00
-  00000000000003BC: 48 8B C8           mov         rcx,rax
-  00000000000003BF: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000003C4: 48 89 84 24 F8 00  mov         qword ptr [rsp+0F8h],rax
+  00000000000003CC: 48 8B C8           mov         rcx,rax
+  00000000000003CF: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000003D4: 48 89 84 24 F8 00  mov         qword ptr [rsp+0F8h],rax
                     00 00
-  00000000000003CC: F2 0F 10 84 24 E0  movsd       xmm0,mmword ptr [rsp+0E0h]
+  00000000000003DC: F2 0F 10 84 24 E0  movsd       xmm0,mmword ptr [rsp+0E0h]
                     00 00 00
-  00000000000003D5: F2 0F 11 84 24 E8  movsd       mmword ptr [rsp+0E8h],xmm0
+  00000000000003E5: F2 0F 11 84 24 E8  movsd       mmword ptr [rsp+0E8h],xmm0
                     00 00 00
-  00000000000003DE: F2 0F 10 84 24 E8  movsd       xmm0,mmword ptr [rsp+0E8h]
+  00000000000003EE: F2 0F 10 84 24 E8  movsd       xmm0,mmword ptr [rsp+0E8h]
                     00 00 00
-  00000000000003E7: F2 0F 11 84 24 F0  movsd       mmword ptr [rsp+0F0h],xmm0
+  00000000000003F7: F2 0F 11 84 24 F0  movsd       mmword ptr [rsp+0F0h],xmm0
                     00 00 00
-  00000000000003F0: F2 0F 10 8C 24 F0  movsd       xmm1,mmword ptr [rsp+0F0h]
+  0000000000000400: F2 0F 10 8C 24 F0  movsd       xmm1,mmword ptr [rsp+0F0h]
                     00 00 00
-  00000000000003F9: 48 8B 8C 24 F8 00  mov         rcx,qword ptr [rsp+0F8h]
+  0000000000000409: 48 8B 8C 24 F8 00  mov         rcx,qword ptr [rsp+0F8h]
                     00 00
-  0000000000000401: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@N@Z]
-  0000000000000407: 48 8D 15 00 00 00  lea         rdx,[$SG84247]
+  0000000000000411: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@N@Z]
+  0000000000000417: 48 8D 15 00 00 00  lea         rdx,[$SG84254]
                     00
-  000000000000040E: 48 8B C8           mov         rcx,rax
-  0000000000000411: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  0000000000000416: 48 89 84 24 08 01  mov         qword ptr [rsp+108h],rax
+  000000000000041E: 48 8B C8           mov         rcx,rax
+  0000000000000421: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  0000000000000426: 48 89 84 24 08 01  mov         qword ptr [rsp+108h],rax
                     00 00
-  000000000000041E: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
+  000000000000042E: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
                     00
-  0000000000000425: 48 89 84 24 00 01  mov         qword ptr [rsp+100h],rax
+  0000000000000435: 48 89 84 24 00 01  mov         qword ptr [rsp+100h],rax
                     00 00
-  000000000000042D: 48 8B 94 24 00 01  mov         rdx,qword ptr [rsp+100h]
+  000000000000043D: 48 8B 94 24 00 01  mov         rdx,qword ptr [rsp+100h]
                     00 00
-  0000000000000435: 48 8B 8C 24 08 01  mov         rcx,qword ptr [rsp+108h]
+  0000000000000445: 48 8B 8C 24 08 01  mov         rcx,qword ptr [rsp+108h]
                     00 00
-  000000000000043D: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  0000000000000442: C7 44 24 20 01 00  mov         dword ptr [rsp+20h],1
+  000000000000044D: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  0000000000000452: 48 89 84 24 10 01  mov         qword ptr [rsp+110h],rax
                     00 00
-  000000000000044A: 41 B9 40 00 00 00  mov         r9d,40h
-  0000000000000450: 41 B8 01 00 00 00  mov         r8d,1
-  0000000000000456: 48 8D 94 24 70 02  lea         rdx,[rsp+270h]
-                    00 00
-  000000000000045E: 48 8D 8C 24 40 01  lea         rcx,[rsp+140h]
-                    00 00
-  0000000000000466: E8 00 00 00 00     call        ??0?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@HH@Z
-  000000000000046B: 90                 nop
-  000000000000046C: 48 8B 84 24 40 01  mov         rax,qword ptr [rsp+140h]
-                    00 00
-  0000000000000474: 48 63 40 04        movsxd      rax,dword ptr [rax+4]
-  0000000000000478: 48 8D 84 04 40 01  lea         rax,[rsp+rax+140h]
-                    00 00
-  0000000000000480: 48 8B C8           mov         rcx,rax
-  0000000000000483: FF 15 00 00 00 00  call        qword ptr [__imp_??7ios_base@std@@QEBA_NXZ]
-  0000000000000489: 0F B6 C0           movzx       eax,al
-  000000000000048C: 85 C0              test        eax,eax
-  000000000000048E: 74 63              je          00000000000004F3
-  0000000000000490: 48 8D 15 00 00 00  lea         rdx,[$SG84250]
+  000000000000045A: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
                     00
-  0000000000000497: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  0000000000000461: 48 8B 8C 24 10 01  mov         rcx,qword ptr [rsp+110h]
+                    00 00
+  0000000000000469: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  000000000000046F: C7 44 24 20 01 00  mov         dword ptr [rsp+20h],1
+                    00 00
+  0000000000000477: 41 B9 40 00 00 00  mov         r9d,40h
+  000000000000047D: 41 B8 01 00 00 00  mov         r8d,1
+  0000000000000483: 48 8D 94 24 90 02  lea         rdx,[rsp+290h]
+                    00 00
+  000000000000048B: 48 8D 8C 24 60 01  lea         rcx,[rsp+160h]
+                    00 00
+  0000000000000493: E8 00 00 00 00     call        ??0?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@HH@Z
+  0000000000000498: 90                 nop
+  0000000000000499: 48 8B 84 24 60 01  mov         rax,qword ptr [rsp+160h]
+                    00 00
+  00000000000004A1: 48 63 40 04        movsxd      rax,dword ptr [rax+4]
+  00000000000004A5: 48 8D 84 04 60 01  lea         rax,[rsp+rax+160h]
+                    00 00
+  00000000000004AD: 48 8B C8           mov         rcx,rax
+  00000000000004B0: FF 15 00 00 00 00  call        qword ptr [__imp_??7ios_base@std@@QEBA_NXZ]
+  00000000000004B6: 0F B6 C0           movzx       eax,al
+  00000000000004B9: 85 C0              test        eax,eax
+  00000000000004BB: 74 63              je          0000000000000520
+  00000000000004BD: 48 8D 15 00 00 00  lea         rdx,[$SG84257]
                     00
-  000000000000049E: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000004A3: 90                 nop
-  00000000000004A4: C7 44 24 3C 01 00  mov         dword ptr [rsp+3Ch],1
-                    00 00
-  00000000000004AC: 48 8D 84 24 F0 01  lea         rax,[rsp+1F0h]
-                    00 00
-  00000000000004B4: 48 8B C8           mov         rcx,rax
-  00000000000004B7: E8 00 00 00 00     call        ??1?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAA@XZ
-  00000000000004BC: 48 8D 84 24 F0 01  lea         rax,[rsp+1F0h]
-                    00 00
-  00000000000004C4: 48 8B C8           mov         rcx,rax
-  00000000000004C7: FF 15 00 00 00 00  call        qword ptr [__imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ]
-  00000000000004CD: 90                 nop
-  00000000000004CE: 48 8D 8C 24 90 02  lea         rcx,[rsp+290h]
-                    00 00
-  00000000000004D6: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
-  00000000000004DB: 90                 nop
-  00000000000004DC: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
-                    00 00
-  00000000000004E4: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
-  00000000000004E9: 90                 nop
-  00000000000004EA: 8B 44 24 3C        mov         eax,dword ptr [rsp+3Ch]
-  00000000000004EE: E9 27 02 00 00     jmp         000000000000071A
-  00000000000004F3: 48 8D 84 24 50 02  lea         rax,[rsp+250h]
-                    00 00
-  00000000000004FB: 48 89 84 24 10 01  mov         qword ptr [rsp+110h],rax
-                    00 00
-  0000000000000503: 48 8B 84 24 10 01  mov         rax,qword ptr [rsp+110h]
-                    00 00
-  000000000000050B: 48 8B C8           mov         rcx,rax
-  000000000000050E: E8 00 00 00 00     call        ??0?$_String_val@U?$_Simple_types@D@std@@@std@@QEAA@XZ
-  0000000000000513: 90                 nop
-  0000000000000514: 48 8D 8C 24 50 02  lea         rcx,[rsp+250h]
-                    00 00
-  000000000000051C: E8 00 00 00 00     call        ?_Construct_empty@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
-  0000000000000521: 90                 nop
-  0000000000000522: C6 44 24 30 00     mov         byte ptr [rsp+30h],0
-  0000000000000527: C7 44 24 34 00 00  mov         dword ptr [rsp+34h],0
-                    00 00
-  000000000000052F: 48 8D 94 24 50 02  lea         rdx,[rsp+250h]
-                    00 00
-  0000000000000537: 48 8D 8C 24 40 01  lea         rcx,[rsp+140h]
-                    00 00
-  000000000000053F: E8 00 00 00 00     call        ??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
-  0000000000000544: 48 89 44 24 48     mov         qword ptr [rsp+48h],rax
-  0000000000000549: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
-  000000000000054E: 48 8B 00           mov         rax,qword ptr [rax]
-  0000000000000551: 48 63 40 04        movsxd      rax,dword ptr [rax+4]
-  0000000000000555: 48 8B 4C 24 48     mov         rcx,qword ptr [rsp+48h]
-  000000000000055A: 48 03 C8           add         rcx,rax
-  000000000000055D: 48 8B C1           mov         rax,rcx
-  0000000000000560: 48 8B C8           mov         rcx,rax
-  0000000000000563: FF 15 00 00 00 00  call        qword ptr [__imp_??Bios_base@std@@QEBA_NXZ]
-  0000000000000569: 0F B6 C0           movzx       eax,al
-  000000000000056C: 85 C0              test        eax,eax
-  000000000000056E: 0F 84 C9 00 00 00  je          000000000000063D
-  0000000000000574: 0F B6 44 24 30     movzx       eax,byte ptr [rsp+30h]
-  0000000000000579: 85 C0              test        eax,eax
-  000000000000057B: 75 3D              jne         00000000000005BA
-  000000000000057D: 45 33 C0           xor         r8d,r8d
-  0000000000000580: 48 8D 15 00 00 00  lea         rdx,[$SG84255]
+  00000000000004C4: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  0000000000000587: 48 8D 8C 24 50 02  lea         rcx,[rsp+250h]
+  00000000000004CB: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000004D0: 90                 nop
+  00000000000004D1: C7 44 24 40 01 00  mov         dword ptr [rsp+40h],1
                     00 00
-  000000000000058F: E8 00 00 00 00     call        ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KQEBD_K@Z
-  0000000000000594: 48 83 F8 FF        cmp         rax,0FFFFFFFFFFFFFFFFh
-  0000000000000598: 74 1E              je          00000000000005B8
-  000000000000059A: C6 44 24 30 01     mov         byte ptr [rsp+30h],1
-  000000000000059F: 48 8D 15 00 00 00  lea         rdx,[$SG84256]
+  00000000000004D9: 48 8D 84 24 10 02  lea         rax,[rsp+210h]
+                    00 00
+  00000000000004E1: 48 8B C8           mov         rcx,rax
+  00000000000004E4: E8 00 00 00 00     call        ??1?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+  00000000000004E9: 48 8D 84 24 10 02  lea         rax,[rsp+210h]
+                    00 00
+  00000000000004F1: 48 8B C8           mov         rcx,rax
+  00000000000004F4: FF 15 00 00 00 00  call        qword ptr [__imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ]
+  00000000000004FA: 90                 nop
+  00000000000004FB: 48 8D 8C 24 B0 02  lea         rcx,[rsp+2B0h]
+                    00 00
+  0000000000000503: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  0000000000000508: 90                 nop
+  0000000000000509: 48 8D 8C 24 90 02  lea         rcx,[rsp+290h]
+                    00 00
+  0000000000000511: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  0000000000000516: 90                 nop
+  0000000000000517: 8B 44 24 40        mov         eax,dword ptr [rsp+40h]
+  000000000000051B: E9 42 03 00 00     jmp         0000000000000862
+  0000000000000520: 48 8D 15 00 00 00  lea         rdx,[$SG84259]
                     00
-  00000000000005A6: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  0000000000000527: 48 8D 8C 24 D0 02  lea         rcx,[rsp+2D0h]
+                    00 00
+  000000000000052F: E8 00 00 00 00     call        ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z
+  0000000000000534: 90                 nop
+  0000000000000535: 48 8D 84 24 70 02  lea         rax,[rsp+270h]
+                    00 00
+  000000000000053D: 48 89 84 24 18 01  mov         qword ptr [rsp+118h],rax
+                    00 00
+  0000000000000545: 0F B6 54 24 33     movzx       edx,byte ptr [rsp+33h]
+  000000000000054A: 48 8B 8C 24 18 01  mov         rcx,qword ptr [rsp+118h]
+                    00 00
+  0000000000000552: E8 00 00 00 00     call        ??$?0$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z
+  0000000000000557: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
+                    00 00
+  000000000000055F: E8 00 00 00 00     call        ?_Construct_empty@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  0000000000000564: 90                 nop
+  0000000000000565: C6 44 24 30 00     mov         byte ptr [rsp+30h],0
+  000000000000056A: C7 44 24 34 00 00  mov         dword ptr [rsp+34h],0
+                    00 00
+  0000000000000572: 48 8D 94 24 70 02  lea         rdx,[rsp+270h]
+                    00 00
+  000000000000057A: 48 8D 8C 24 60 01  lea         rcx,[rsp+160h]
+                    00 00
+  0000000000000582: E8 00 00 00 00     call        ??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
+  0000000000000587: 48 89 44 24 48     mov         qword ptr [rsp+48h],rax
+  000000000000058C: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
+  0000000000000591: 48 8B 00           mov         rax,qword ptr [rax]
+  0000000000000594: 48 63 40 04        movsxd      rax,dword ptr [rax+4]
+  0000000000000598: 48 8B 4C 24 48     mov         rcx,qword ptr [rsp+48h]
+  000000000000059D: 48 03 C8           add         rcx,rax
+  00000000000005A0: 48 8B C1           mov         rax,rcx
+  00000000000005A3: 48 8B C8           mov         rcx,rax
+  00000000000005A6: FF 15 00 00 00 00  call        qword ptr [__imp_??Bios_base@std@@QEBA_NXZ]
+  00000000000005AC: 0F B6 C0           movzx       eax,al
+  00000000000005AF: 85 C0              test        eax,eax
+  00000000000005B1: 0F 84 73 01 00 00  je          000000000000072A
+  00000000000005B7: 0F B6 44 24 30     movzx       eax,byte ptr [rsp+30h]
+  00000000000005BC: 85 C0              test        eax,eax
+  00000000000005BE: 75 59              jne         0000000000000619
+  00000000000005C0: 45 33 C0           xor         r8d,r8d
+  00000000000005C3: 48 8D 94 24 D0 02  lea         rdx,[rsp+2D0h]
+                    00 00
+  00000000000005CB: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
+                    00 00
+  00000000000005D3: E8 00 00 00 00     call        ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KAEBV12@_K@Z
+  00000000000005D8: 48 83 F8 FF        cmp         rax,0FFFFFFFFFFFFFFFFh
+  00000000000005DC: 74 36              je          0000000000000614
+  00000000000005DE: C6 44 24 30 01     mov         byte ptr [rsp+30h],1
+  00000000000005E3: 48 8D 15 00 00 00  lea         rdx,[$SG84263]
                     00
-  00000000000005AD: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000005B2: 90                 nop
-  00000000000005B3: E9 77 FF FF FF     jmp         000000000000052F
-  00000000000005B8: EB 7E              jmp         0000000000000638
-  00000000000005BA: 48 83 BC 24 60 02  cmp         qword ptr [rsp+260h],0
+  00000000000005EA: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+                    00
+  00000000000005F1: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000005F6: 48 89 84 24 20 01  mov         qword ptr [rsp+120h],rax
+                    00 00
+  00000000000005FE: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
+                    00
+  0000000000000605: 48 8B 8C 24 20 01  mov         rcx,qword ptr [rsp+120h]
+                    00 00
+  000000000000060D: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  0000000000000613: 90                 nop
+  0000000000000614: E9 0C 01 00 00     jmp         0000000000000725
+  0000000000000619: 48 83 BC 24 80 02  cmp         qword ptr [rsp+280h],0
                     00 00 00
-  00000000000005C3: 75 0A              jne         00000000000005CF
-  00000000000005C5: C7 44 24 38 01 00  mov         dword ptr [rsp+38h],1
+  0000000000000622: 75 0A              jne         000000000000062E
+  0000000000000624: C7 44 24 38 01 00  mov         dword ptr [rsp+38h],1
                     00 00
-  00000000000005CD: EB 08              jmp         00000000000005D7
-  00000000000005CF: C7 44 24 38 00 00  mov         dword ptr [rsp+38h],0
+  000000000000062C: EB 08              jmp         0000000000000636
+  000000000000062E: C7 44 24 38 00 00  mov         dword ptr [rsp+38h],0
                     00 00
-  00000000000005D7: 0F B6 44 24 38     movzx       eax,byte ptr [rsp+38h]
-  00000000000005DC: 88 44 24 31        mov         byte ptr [rsp+31h],al
-  00000000000005E0: 0F B6 44 24 31     movzx       eax,byte ptr [rsp+31h]
-  00000000000005E5: 0F B6 C0           movzx       eax,al
-  00000000000005E8: 85 C0              test        eax,eax
-  00000000000005EA: 75 1D              jne         0000000000000609
-  00000000000005EC: 45 33 C0           xor         r8d,r8d
-  00000000000005EF: 48 8D 15 00 00 00  lea         rdx,[$SG84259]
+  0000000000000636: 0F B6 44 24 38     movzx       eax,byte ptr [rsp+38h]
+  000000000000063B: 88 44 24 31        mov         byte ptr [rsp+31h],al
+  000000000000063F: 0F B6 44 24 31     movzx       eax,byte ptr [rsp+31h]
+  0000000000000644: 0F B6 C0           movzx       eax,al
+  0000000000000647: 85 C0              test        eax,eax
+  0000000000000649: 75 3A              jne         0000000000000685
+  000000000000064B: 45 33 C0           xor         r8d,r8d
+  000000000000064E: 48 8D 15 00 00 00  lea         rdx,[$SG84266]
                     00
-  00000000000005F6: 48 8D 8C 24 50 02  lea         rcx,[rsp+250h]
+  0000000000000655: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
                     00 00
-  00000000000005FE: E8 00 00 00 00     call        ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KQEBD_K@Z
-  0000000000000603: 48 83 F8 FF        cmp         rax,0FFFFFFFFFFFFFFFFh
-  0000000000000607: 74 02              je          000000000000060B
-  0000000000000609: EB 32              jmp         000000000000063D
-  000000000000060B: 48 8D 94 24 50 02  lea         rdx,[rsp+250h]
-                    00 00
-  0000000000000613: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  000000000000065D: E8 00 00 00 00     call        ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KQEBD_K@Z
+  0000000000000662: 48 83 F8 FF        cmp         rax,0FFFFFFFFFFFFFFFFh
+  0000000000000666: 75 1D              jne         0000000000000685
+  0000000000000668: 45 33 C0           xor         r8d,r8d
+  000000000000066B: 48 8D 15 00 00 00  lea         rdx,[$SG84267]
                     00
-  000000000000061A: E8 00 00 00 00     call        ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
-  000000000000061F: 48 8D 15 00 00 00  lea         rdx,[$SG84260]
+  0000000000000672: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
+                    00 00
+  000000000000067A: E8 00 00 00 00     call        ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KQEBD_K@Z
+  000000000000067F: 48 83 F8 FF        cmp         rax,0FFFFFFFFFFFFFFFFh
+  0000000000000683: 74 05              je          000000000000068A
+  0000000000000685: E9 A0 00 00 00     jmp         000000000000072A
+  000000000000068A: 48 83 BC 24 80 02  cmp         qword ptr [rsp+280h],0
+                    00 00 00
+  0000000000000693: 75 0A              jne         000000000000069F
+  0000000000000695: C7 44 24 3C 01 00  mov         dword ptr [rsp+3Ch],1
+                    00 00
+  000000000000069D: EB 08              jmp         00000000000006A7
+  000000000000069F: C7 44 24 3C 00 00  mov         dword ptr [rsp+3Ch],0
+                    00 00
+  00000000000006A7: 0F B6 44 24 3C     movzx       eax,byte ptr [rsp+3Ch]
+  00000000000006AC: 88 44 24 32        mov         byte ptr [rsp+32h],al
+  00000000000006B0: 0F B6 44 24 32     movzx       eax,byte ptr [rsp+32h]
+  00000000000006B5: 0F B6 C0           movzx       eax,al
+  00000000000006B8: 85 C0              test        eax,eax
+  00000000000006BA: 75 69              jne         0000000000000725
+  00000000000006BC: 33 D2              xor         edx,edx
+  00000000000006BE: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
+                    00 00
+  00000000000006C6: E8 00 00 00 00     call        ??A?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAD_K@Z
+  00000000000006CB: 0F BE 00           movsx       eax,byte ptr [rax]
+  00000000000006CE: 83 F8 09           cmp         eax,9
+  00000000000006D1: 74 17              je          00000000000006EA
+  00000000000006D3: 33 D2              xor         edx,edx
+  00000000000006D5: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
+                    00 00
+  00000000000006DD: E8 00 00 00 00     call        ??A?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAD_K@Z
+  00000000000006E2: 0F BE 00           movsx       eax,byte ptr [rax]
+  00000000000006E5: 83 F8 20           cmp         eax,20h
+  00000000000006E8: 75 3B              jne         0000000000000725
+  00000000000006EA: 48 8D 94 24 70 02  lea         rdx,[rsp+270h]
+                    00 00
+  00000000000006F2: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  0000000000000626: 48 8B C8           mov         rcx,rax
-  0000000000000629: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  000000000000062E: 8B 44 24 34        mov         eax,dword ptr [rsp+34h]
-  0000000000000632: FF C0              inc         eax
-  0000000000000634: 89 44 24 34        mov         dword ptr [rsp+34h],eax
-  0000000000000638: E9 F2 FE FF FF     jmp         000000000000052F
-  000000000000063D: 48 8D 8C 24 40 01  lea         rcx,[rsp+140h]
+  00000000000006F9: E8 00 00 00 00     call        ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
+  00000000000006FE: 48 89 84 24 28 01  mov         qword ptr [rsp+128h],rax
                     00 00
-  0000000000000645: E8 00 00 00 00     call        ?close@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAAXXZ
-  000000000000064A: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_GREEN@Color@@3PEBDEB]
+  0000000000000706: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
                     00
-  0000000000000651: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
+  000000000000070D: 48 8B 8C 24 28 01  mov         rcx,qword ptr [rsp+128h]
+                    00 00
+  0000000000000715: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  000000000000071B: 8B 44 24 34        mov         eax,dword ptr [rsp+34h]
+  000000000000071F: FF C0              inc         eax
+  0000000000000721: 89 44 24 34        mov         dword ptr [rsp+34h],eax
+  0000000000000725: E9 48 FE FF FF     jmp         0000000000000572
+  000000000000072A: 48 8D 8C 24 60 01  lea         rcx,[rsp+160h]
+                    00 00
+  0000000000000732: E8 00 00 00 00     call        ?close@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAAXXZ
+  0000000000000737: 48 8D 15 00 00 00  lea         rdx,[$SG84270]
                     00
-  0000000000000658: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  000000000000065D: 48 8D 15 00 00 00  lea         rdx,[$SG84262]
+  000000000000073E: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  0000000000000664: 48 8B C8           mov         rcx,rax
-  0000000000000667: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  000000000000066C: 48 89 84 24 18 01  mov         qword ptr [rsp+118h],rax
+  0000000000000745: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  000000000000074A: 48 89 84 24 30 01  mov         qword ptr [rsp+130h],rax
                     00 00
-  0000000000000674: 8B 54 24 34        mov         edx,dword ptr [rsp+34h]
-  0000000000000678: 48 8B 8C 24 18 01  mov         rcx,qword ptr [rsp+118h]
-                    00 00
-  0000000000000680: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z]
-  0000000000000686: 48 8D 15 00 00 00  lea         rdx,[$SG84261]
+  0000000000000752: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
                     00
-  000000000000068D: 48 8B C8           mov         rcx,rax
-  0000000000000690: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  0000000000000695: 48 89 84 24 28 01  mov         qword ptr [rsp+128h],rax
+  0000000000000759: 48 8B 8C 24 30 01  mov         rcx,qword ptr [rsp+130h]
                     00 00
-  000000000000069D: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
+  0000000000000761: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  0000000000000767: 48 8B 15 00 00 00  mov         rdx,qword ptr [?BOLD_GREEN@Color@@3PEBDEB]
                     00
-  00000000000006A4: 48 89 84 24 20 01  mov         qword ptr [rsp+120h],rax
-                    00 00
-  00000000000006AC: 48 8B 94 24 20 01  mov         rdx,qword ptr [rsp+120h]
-                    00 00
-  00000000000006B4: 48 8B 8C 24 28 01  mov         rcx,qword ptr [rsp+128h]
-                    00 00
-  00000000000006BC: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
-  00000000000006C1: 90                 nop
-  00000000000006C2: C7 44 24 40 00 00  mov         dword ptr [rsp+40h],0
-                    00 00
-  00000000000006CA: 48 8D 8C 24 50 02  lea         rcx,[rsp+250h]
-                    00 00
-  00000000000006D2: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
-  00000000000006D7: 90                 nop
-  00000000000006D8: 48 8D 84 24 F0 01  lea         rax,[rsp+1F0h]
-                    00 00
-  00000000000006E0: 48 8B C8           mov         rcx,rax
-  00000000000006E3: E8 00 00 00 00     call        ??1?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAA@XZ
-  00000000000006E8: 48 8D 84 24 F0 01  lea         rax,[rsp+1F0h]
-                    00 00
-  00000000000006F0: 48 8B C8           mov         rcx,rax
-  00000000000006F3: FF 15 00 00 00 00  call        qword ptr [__imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ]
-  00000000000006F9: 90                 nop
-  00000000000006FA: 48 8D 8C 24 90 02  lea         rcx,[rsp+290h]
-                    00 00
-  0000000000000702: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
-  0000000000000707: 90                 nop
-  0000000000000708: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
-                    00 00
-  0000000000000710: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
-  0000000000000715: 90                 nop
-  0000000000000716: 8B 44 24 40        mov         eax,dword ptr [rsp+40h]
-  000000000000071A: 48 8B 8C 24 B0 02  mov         rcx,qword ptr [rsp+2B0h]
-                    00 00
-  0000000000000722: 48 33 CC           xor         rcx,rsp
-  0000000000000725: E8 00 00 00 00     call        __security_check_cookie
-  000000000000072A: 48 81 C4 C8 02 00  add         rsp,2C8h
+  000000000000076E: 48 8B 0D 00 00 00  mov         rcx,qword ptr [__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A]
                     00
-  0000000000000731: C3                 ret
+  0000000000000775: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  000000000000077A: 48 8D 15 00 00 00  lea         rdx,[$SG84272]
+                    00
+  0000000000000781: 48 8B C8           mov         rcx,rax
+  0000000000000784: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  0000000000000789: 48 89 84 24 38 01  mov         qword ptr [rsp+138h],rax
+                    00 00
+  0000000000000791: 8B 54 24 34        mov         edx,dword ptr [rsp+34h]
+  0000000000000795: 48 8B 8C 24 38 01  mov         rcx,qword ptr [rsp+138h]
+                    00 00
+  000000000000079D: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z]
+  00000000000007A3: 48 8D 15 00 00 00  lea         rdx,[$SG84271]
+                    00
+  00000000000007AA: 48 8B C8           mov         rcx,rax
+  00000000000007AD: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000007B2: 48 89 84 24 48 01  mov         qword ptr [rsp+148h],rax
+                    00 00
+  00000000000007BA: 48 8B 05 00 00 00  mov         rax,qword ptr [?RESET@Color@@3PEBDEB]
+                    00
+  00000000000007C1: 48 89 84 24 40 01  mov         qword ptr [rsp+140h],rax
+                    00 00
+  00000000000007C9: 48 8B 94 24 40 01  mov         rdx,qword ptr [rsp+140h]
+                    00 00
+  00000000000007D1: 48 8B 8C 24 48 01  mov         rcx,qword ptr [rsp+148h]
+                    00 00
+  00000000000007D9: E8 00 00 00 00     call        ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+  00000000000007DE: 48 89 84 24 50 01  mov         qword ptr [rsp+150h],rax
+                    00 00
+  00000000000007E6: 48 8D 15 00 00 00  lea         rdx,[??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z]
+                    00
+  00000000000007ED: 48 8B 8C 24 50 01  mov         rcx,qword ptr [rsp+150h]
+                    00 00
+  00000000000007F5: FF 15 00 00 00 00  call        qword ptr [__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z]
+  00000000000007FB: 90                 nop
+  00000000000007FC: C7 44 24 44 00 00  mov         dword ptr [rsp+44h],0
+                    00 00
+  0000000000000804: 48 8D 8C 24 70 02  lea         rcx,[rsp+270h]
+                    00 00
+  000000000000080C: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  0000000000000811: 90                 nop
+  0000000000000812: 48 8D 8C 24 D0 02  lea         rcx,[rsp+2D0h]
+                    00 00
+  000000000000081A: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  000000000000081F: 90                 nop
+  0000000000000820: 48 8D 84 24 10 02  lea         rax,[rsp+210h]
+                    00 00
+  0000000000000828: 48 8B C8           mov         rcx,rax
+  000000000000082B: E8 00 00 00 00     call        ??1?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+  0000000000000830: 48 8D 84 24 10 02  lea         rax,[rsp+210h]
+                    00 00
+  0000000000000838: 48 8B C8           mov         rcx,rax
+  000000000000083B: FF 15 00 00 00 00  call        qword ptr [__imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ]
+  0000000000000841: 90                 nop
+  0000000000000842: 48 8D 8C 24 B0 02  lea         rcx,[rsp+2B0h]
+                    00 00
+  000000000000084A: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  000000000000084F: 90                 nop
+  0000000000000850: 48 8D 8C 24 90 02  lea         rcx,[rsp+290h]
+                    00 00
+  0000000000000858: E8 00 00 00 00     call        ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAAXXZ
+  000000000000085D: 90                 nop
+  000000000000085E: 8B 44 24 44        mov         eax,dword ptr [rsp+44h]
+  0000000000000862: 48 8B 8C 24 F0 02  mov         rcx,qword ptr [rsp+2F0h]
+                    00 00
+  000000000000086A: 48 33 CC           xor         rcx,rsp
+  000000000000086D: E8 00 00 00 00     call        __security_check_cookie
+  0000000000000872: 48 81 C4 08 03 00  add         rsp,308h
+                    00
+  0000000000000879: C3                 ret
 
 ?dtor$0@?0??run@@YAHXZ@4HA (int `int __cdecl run(void)'::`1'::dtor$0):
   0000000000000000: 40 55              push        rbp
   0000000000000002: 48 83 EC 20        sub         rsp,20h
   0000000000000006: 48 8B EA           mov         rbp,rdx
-  0000000000000009: 48 8D 4D 78        lea         rcx,[rbp+78h]
-  000000000000000D: E8 00 00 00 00     call        ??1?$vector@NV?$allocator@N@std@@@std@@QEAA@XZ
-  0000000000000012: 48 83 C4 20        add         rsp,20h
-  0000000000000016: 5D                 pop         rbp
-  0000000000000017: C3                 ret
+  0000000000000009: 48 8D 8D 80 00 00  lea         rcx,[rbp+80h]
+                    00
+  0000000000000010: E8 00 00 00 00     call        ??1?$vector@NV?$allocator@N@std@@@std@@QEAA@XZ
+  0000000000000015: 48 83 C4 20        add         rsp,20h
+  0000000000000019: 5D                 pop         rbp
+  000000000000001A: C3                 ret
 main$dtor$0:
-  0000000000000018: 40 55              push        rbp
-  000000000000001A: 48 83 EC 20        sub         rsp,20h
-  000000000000001E: 48 8B EA           mov         rbp,rdx
-  0000000000000021: 48 8D 8D 70 02 00  lea         rcx,[rbp+270h]
+  000000000000001B: 40 55              push        rbp
+  000000000000001D: 48 83 EC 20        sub         rsp,20h
+  0000000000000021: 48 8B EA           mov         rbp,rdx
+  0000000000000024: 48 8D 8D 90 02 00  lea         rcx,[rbp+290h]
                     00
-  0000000000000028: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
-  000000000000002D: 48 83 C4 20        add         rsp,20h
-  0000000000000031: 5D                 pop         rbp
-  0000000000000032: C3                 ret
+  000000000000002B: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
+  0000000000000030: 48 83 C4 20        add         rsp,20h
+  0000000000000034: 5D                 pop         rbp
+  0000000000000035: C3                 ret
 main$dtor$1:
-  0000000000000033: 40 55              push        rbp
-  0000000000000035: 48 83 EC 20        sub         rsp,20h
-  0000000000000039: 48 8B EA           mov         rbp,rdx
-  000000000000003C: 48 8D 8D 90 02 00  lea         rcx,[rbp+290h]
+  0000000000000036: 40 55              push        rbp
+  0000000000000038: 48 83 EC 20        sub         rsp,20h
+  000000000000003C: 48 8B EA           mov         rbp,rdx
+  000000000000003F: 48 8D 8D B0 02 00  lea         rcx,[rbp+2B0h]
                     00
-  0000000000000043: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
-  0000000000000048: 48 83 C4 20        add         rsp,20h
-  000000000000004C: 5D                 pop         rbp
-  000000000000004D: C3                 ret
+  0000000000000046: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
+  000000000000004B: 48 83 C4 20        add         rsp,20h
+  000000000000004F: 5D                 pop         rbp
+  0000000000000050: C3                 ret
 main$dtor$2:
-  000000000000004E: 40 55              push        rbp
-  0000000000000050: 48 83 EC 20        sub         rsp,20h
-  0000000000000054: 48 8B EA           mov         rbp,rdx
-  0000000000000057: 48 8D 8D 40 01 00  lea         rcx,[rbp+140h]
+  0000000000000051: 40 55              push        rbp
+  0000000000000053: 48 83 EC 20        sub         rsp,20h
+  0000000000000057: 48 8B EA           mov         rbp,rdx
+  000000000000005A: 48 8D 8D 60 01 00  lea         rcx,[rbp+160h]
                     00
-  000000000000005E: E8 00 00 00 00     call        ??_D?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAAXXZ
-  0000000000000063: 48 83 C4 20        add         rsp,20h
-  0000000000000067: 5D                 pop         rbp
-  0000000000000068: C3                 ret
+  0000000000000061: E8 00 00 00 00     call        ??_D?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAAXXZ
+  0000000000000066: 48 83 C4 20        add         rsp,20h
+  000000000000006A: 5D                 pop         rbp
+  000000000000006B: C3                 ret
 main$dtor$3:
-  0000000000000069: 40 55              push        rbp
-  000000000000006B: 48 83 EC 20        sub         rsp,20h
-  000000000000006F: 48 8B EA           mov         rbp,rdx
-  0000000000000072: 48 8D 8D 50 02 00  lea         rcx,[rbp+250h]
+  000000000000006C: 40 55              push        rbp
+  000000000000006E: 48 83 EC 20        sub         rsp,20h
+  0000000000000072: 48 8B EA           mov         rbp,rdx
+  0000000000000075: 48 8D 8D D0 02 00  lea         rcx,[rbp+2D0h]
                     00
-  0000000000000079: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
-  000000000000007E: 48 83 C4 20        add         rsp,20h
-  0000000000000082: 5D                 pop         rbp
-  0000000000000083: C3                 ret
+  000000000000007C: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
+  0000000000000081: 48 83 C4 20        add         rsp,20h
+  0000000000000085: 5D                 pop         rbp
+  0000000000000086: C3                 ret
+main$dtor$4:
+  0000000000000087: 40 55              push        rbp
+  0000000000000089: 48 83 EC 20        sub         rsp,20h
+  000000000000008D: 48 8B EA           mov         rbp,rdx
+  0000000000000090: 48 8D 8D 70 02 00  lea         rcx,[rbp+270h]
+                    00
+  0000000000000097: E8 00 00 00 00     call        ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
+  000000000000009C: 48 83 C4 20        add         rsp,20h
+  00000000000000A0: 5D                 pop         rbp
+  00000000000000A1: C3                 ret
+
+??$?0$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z (public: __cdecl std::_Compressed_pair<class std::allocator<char>,class std::_String_val<struct std::_Simple_types<char> >,1>::_Compressed_pair<class std::allocator<char>,class std::_String_val<struct std::_Simple_types<char> >,1><>(struct std::_Zero_then_variadic_args_t)):
+  0000000000000000: 88 54 24 10        mov         byte ptr [rsp+10h],dl
+  0000000000000004: 48 89 4C 24 08     mov         qword ptr [rsp+8],rcx
+  0000000000000009: 57                 push        rdi
+  000000000000000A: 48 83 EC 10        sub         rsp,10h
+  000000000000000E: 48 8B 44 24 20     mov         rax,qword ptr [rsp+20h]
+  0000000000000013: 48 89 04 24        mov         qword ptr [rsp],rax
+  0000000000000017: 48 8B 04 24        mov         rax,qword ptr [rsp]
+  000000000000001B: 48 89 44 24 08     mov         qword ptr [rsp+8],rax
+  0000000000000020: 48 8B 44 24 08     mov         rax,qword ptr [rsp+8]
+  0000000000000025: 48 8B 7C 24 08     mov         rdi,qword ptr [rsp+8]
+  000000000000002A: 33 C0              xor         eax,eax
+  000000000000002C: B9 10 00 00 00     mov         ecx,10h
+  0000000000000031: F3 AA              rep stos    byte ptr [rdi]
+  0000000000000033: 48 8B 04 24        mov         rax,qword ptr [rsp]
+  0000000000000037: 48 C7 40 10 00 00  mov         qword ptr [rax+10h],0
+                    00 00
+  000000000000003F: 48 8B 04 24        mov         rax,qword ptr [rsp]
+  0000000000000043: 48 C7 40 18 00 00  mov         qword ptr [rax+18h],0
+                    00 00
+  000000000000004B: 48 8B 44 24 20     mov         rax,qword ptr [rsp+20h]
+  0000000000000050: 48 83 C4 10        add         rsp,10h
+  0000000000000054: 5F                 pop         rdi
+  0000000000000055: C3                 ret
 
 ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z (class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<char,struct std::char_traits<char>,class std::allocator<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)):
   0000000000000000: 48 89 54 24 10     mov         qword ptr [rsp+10h],rdx
@@ -3497,6 +3614,44 @@ __catch$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_i
   000000000000004A: 48 83 C4 38        add         rsp,38h
   000000000000004E: C3                 ret
 
+??A?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAD_K@Z (public: char & __cdecl std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::operator[](unsigned __int64)):
+  0000000000000000: 48 89 54 24 10     mov         qword ptr [rsp+10h],rdx
+  0000000000000005: 48 89 4C 24 08     mov         qword ptr [rsp+8],rcx
+  000000000000000A: 48 83 EC 38        sub         rsp,38h
+  000000000000000E: 48 8B 44 24 40     mov         rax,qword ptr [rsp+40h]
+  0000000000000013: 48 89 44 24 08     mov         qword ptr [rsp+8],rax
+  0000000000000018: 48 8B 44 24 08     mov         rax,qword ptr [rsp+8]
+  000000000000001D: 48 89 44 24 10     mov         qword ptr [rsp+10h],rax
+  0000000000000022: 48 8B 44 24 08     mov         rax,qword ptr [rsp+8]
+  0000000000000027: 48 83 78 18 0F     cmp         qword ptr [rax+18h],0Fh
+  000000000000002C: 76 0A              jbe         0000000000000038
+  000000000000002E: C7 44 24 04 01 00  mov         dword ptr [rsp+4],1
+                    00 00
+  0000000000000036: EB 08              jmp         0000000000000040
+  0000000000000038: C7 44 24 04 00 00  mov         dword ptr [rsp+4],0
+                    00 00
+  0000000000000040: 0F B6 44 24 04     movzx       eax,byte ptr [rsp+4]
+  0000000000000045: 88 04 24           mov         byte ptr [rsp],al
+  0000000000000048: 0F B6 04 24        movzx       eax,byte ptr [rsp]
+  000000000000004C: 0F B6 C0           movzx       eax,al
+  000000000000004F: 85 C0              test        eax,eax
+  0000000000000051: 74 21              je          0000000000000074
+  0000000000000053: 48 8B 44 24 08     mov         rax,qword ptr [rsp+8]
+  0000000000000058: 48 8B 00           mov         rax,qword ptr [rax]
+  000000000000005B: 48 89 44 24 18     mov         qword ptr [rsp+18h],rax
+  0000000000000060: 48 8B 44 24 18     mov         rax,qword ptr [rsp+18h]
+  0000000000000065: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  000000000000006A: 48 8B 44 24 20     mov         rax,qword ptr [rsp+20h]
+  000000000000006F: 48 89 44 24 10     mov         qword ptr [rsp+10h],rax
+  0000000000000074: 48 8B 44 24 10     mov         rax,qword ptr [rsp+10h]
+  0000000000000079: 48 89 44 24 28     mov         qword ptr [rsp+28h],rax
+  000000000000007E: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
+  0000000000000083: 48 8B 4C 24 28     mov         rcx,qword ptr [rsp+28h]
+  0000000000000088: 48 03 C8           add         rcx,rax
+  000000000000008B: 48 8B C1           mov         rax,rcx
+  000000000000008E: 48 83 C4 38        add         rsp,38h
+  0000000000000092: C3                 ret
+
 ??R<lambda_1>@?1??push_back@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAXD@Z@QEBA@QEADQEBD_KD@Z (public: __cdecl `public: void __cdecl std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::push_back(char)'::`2'::<lambda_1>::operator()(char * const,char const * const,unsigned __int64,char)const ):
   0000000000000000: 4C 89 4C 24 20     mov         qword ptr [rsp+20h],r9
   0000000000000005: 4C 89 44 24 18     mov         qword ptr [rsp+18h],r8
@@ -4887,6 +5042,104 @@ __catch$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_i
   0000000000000079: 48 8B 44 24 28     mov         rax,qword ptr [rsp+28h]
   000000000000007E: 48 83 C4 38        add         rsp,38h
   0000000000000082: C3                 ret
+
+?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KAEBV12@_K@Z (public: unsigned __int64 __cdecl std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::find(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned __int64)const ):
+  0000000000000000: 4C 89 44 24 18     mov         qword ptr [rsp+18h],r8
+  0000000000000005: 48 89 54 24 10     mov         qword ptr [rsp+10h],rdx
+  000000000000000A: 48 89 4C 24 08     mov         qword ptr [rsp+8],rcx
+  000000000000000F: 48 81 EC B8 00 00  sub         rsp,0B8h
+                    00
+  0000000000000016: 48 8B 84 24 C8 00  mov         rax,qword ptr [rsp+0C8h]
+                    00 00
+  000000000000001E: 48 8B 40 10        mov         rax,qword ptr [rax+10h]
+  0000000000000022: 48 89 84 24 90 00  mov         qword ptr [rsp+90h],rax
+                    00 00
+  000000000000002A: 48 8B 84 24 C8 00  mov         rax,qword ptr [rsp+0C8h]
+                    00 00
+  0000000000000032: 48 89 44 24 40     mov         qword ptr [rsp+40h],rax
+  0000000000000037: 48 8B 44 24 40     mov         rax,qword ptr [rsp+40h]
+  000000000000003C: 48 89 44 24 50     mov         qword ptr [rsp+50h],rax
+  0000000000000041: 48 8B 44 24 40     mov         rax,qword ptr [rsp+40h]
+  0000000000000046: 48 83 78 18 0F     cmp         qword ptr [rax+18h],0Fh
+  000000000000004B: 76 0A              jbe         0000000000000057
+  000000000000004D: C7 44 24 34 01 00  mov         dword ptr [rsp+34h],1
+                    00 00
+  0000000000000055: EB 08              jmp         000000000000005F
+  0000000000000057: C7 44 24 34 00 00  mov         dword ptr [rsp+34h],0
+                    00 00
+  000000000000005F: 0F B6 44 24 34     movzx       eax,byte ptr [rsp+34h]
+  0000000000000064: 88 44 24 30        mov         byte ptr [rsp+30h],al
+  0000000000000068: 0F B6 44 24 30     movzx       eax,byte ptr [rsp+30h]
+  000000000000006D: 0F B6 C0           movzx       eax,al
+  0000000000000070: 85 C0              test        eax,eax
+  0000000000000072: 74 21              je          0000000000000095
+  0000000000000074: 48 8B 44 24 40     mov         rax,qword ptr [rsp+40h]
+  0000000000000079: 48 8B 00           mov         rax,qword ptr [rax]
+  000000000000007C: 48 89 44 24 60     mov         qword ptr [rsp+60h],rax
+  0000000000000081: 48 8B 44 24 60     mov         rax,qword ptr [rsp+60h]
+  0000000000000086: 48 89 44 24 68     mov         qword ptr [rsp+68h],rax
+  000000000000008B: 48 8B 44 24 68     mov         rax,qword ptr [rsp+68h]
+  0000000000000090: 48 89 44 24 50     mov         qword ptr [rsp+50h],rax
+  0000000000000095: 48 8B 44 24 50     mov         rax,qword ptr [rsp+50h]
+  000000000000009A: 48 89 44 24 70     mov         qword ptr [rsp+70h],rax
+  000000000000009F: 48 8B 44 24 70     mov         rax,qword ptr [rsp+70h]
+  00000000000000A4: 48 89 84 24 98 00  mov         qword ptr [rsp+98h],rax
+                    00 00
+  00000000000000AC: 48 8B 84 24 C0 00  mov         rax,qword ptr [rsp+0C0h]
+                    00 00
+  00000000000000B4: 48 8B 40 10        mov         rax,qword ptr [rax+10h]
+  00000000000000B8: 48 89 84 24 A0 00  mov         qword ptr [rsp+0A0h],rax
+                    00 00
+  00000000000000C0: 48 8B 84 24 C0 00  mov         rax,qword ptr [rsp+0C0h]
+                    00 00
+  00000000000000C8: 48 89 44 24 48     mov         qword ptr [rsp+48h],rax
+  00000000000000CD: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
+  00000000000000D2: 48 89 44 24 58     mov         qword ptr [rsp+58h],rax
+  00000000000000D7: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
+  00000000000000DC: 48 83 78 18 0F     cmp         qword ptr [rax+18h],0Fh
+  00000000000000E1: 76 0A              jbe         00000000000000ED
+  00000000000000E3: C7 44 24 38 01 00  mov         dword ptr [rsp+38h],1
+                    00 00
+  00000000000000EB: EB 08              jmp         00000000000000F5
+  00000000000000ED: C7 44 24 38 00 00  mov         dword ptr [rsp+38h],0
+                    00 00
+  00000000000000F5: 0F B6 44 24 38     movzx       eax,byte ptr [rsp+38h]
+  00000000000000FA: 88 44 24 31        mov         byte ptr [rsp+31h],al
+  00000000000000FE: 0F B6 44 24 31     movzx       eax,byte ptr [rsp+31h]
+  0000000000000103: 0F B6 C0           movzx       eax,al
+  0000000000000106: 85 C0              test        eax,eax
+  0000000000000108: 74 27              je          0000000000000131
+  000000000000010A: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
+  000000000000010F: 48 8B 00           mov         rax,qword ptr [rax]
+  0000000000000112: 48 89 44 24 78     mov         qword ptr [rsp+78h],rax
+  0000000000000117: 48 8B 44 24 78     mov         rax,qword ptr [rsp+78h]
+  000000000000011C: 48 89 84 24 80 00  mov         qword ptr [rsp+80h],rax
+                    00 00
+  0000000000000124: 48 8B 84 24 80 00  mov         rax,qword ptr [rsp+80h]
+                    00 00
+  000000000000012C: 48 89 44 24 58     mov         qword ptr [rsp+58h],rax
+  0000000000000131: 48 8B 44 24 58     mov         rax,qword ptr [rsp+58h]
+  0000000000000136: 48 89 84 24 88 00  mov         qword ptr [rsp+88h],rax
+                    00 00
+  000000000000013E: 48 8B 84 24 88 00  mov         rax,qword ptr [rsp+88h]
+                    00 00
+  0000000000000146: 48 89 84 24 A8 00  mov         qword ptr [rsp+0A8h],rax
+                    00 00
+  000000000000014E: 48 8B 84 24 90 00  mov         rax,qword ptr [rsp+90h]
+                    00 00
+  0000000000000156: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  000000000000015B: 4C 8B 8C 24 98 00  mov         r9,qword ptr [rsp+98h]
+                    00 00
+  0000000000000163: 4C 8B 84 24 D0 00  mov         r8,qword ptr [rsp+0D0h]
+                    00 00
+  000000000000016B: 48 8B 94 24 A0 00  mov         rdx,qword ptr [rsp+0A0h]
+                    00 00
+  0000000000000173: 48 8B 8C 24 A8 00  mov         rcx,qword ptr [rsp+0A8h]
+                    00 00
+  000000000000017B: E8 00 00 00 00     call        ??$_Traits_find@U?$char_traits@D@std@@@std@@YA_KQEBD_K101@Z
+  0000000000000180: 48 81 C4 B8 00 00  add         rsp,0B8h
+                    00
+  0000000000000187: C3                 ret
 
 ?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KQEBD_K@Z (public: unsigned __int64 __cdecl std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::find(char const * const,unsigned __int64)const ):
   0000000000000000: 4C 89 44 24 18     mov         qword ptr [rsp+18h],r8
@@ -6830,17 +7083,17 @@ __catch$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_i
   Summary
 
           10 .bss
-        1018 .chks64
+        1060 .chks64
           28 .data
           9A .data$r
          190 .data$rs
           A0 .debug$S
          13D .drectve
-         618 .pdata
-         46C .rdata
+         648 .pdata
+         49C .rdata
          4CC .rdata$r
-        6193 .text$mn
-         2F6 .text$x
+        654C .text$mn
+         314 .text$x
           23 .voltbl
-         6A2 .xdata
+         6CA .xdata
           F8 .xdata$x
