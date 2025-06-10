@@ -11,8 +11,8 @@ add_executable(OP_level_2 main.cpp)
 
 if(MSVC)
     # Windows/MSVC specific flags
-    target_compile_options(OP_level_1 PRIVATE /Od)
-    # target_compile_options(OP_level_2 PRIVATE /O2)
+    target_compile_options(OP_level_1 PRIVATE /O0)
+    target_compile_options(OP_level_2 PRIVATE /O2)
 else()
     # Linux/GCC/Clang specific flags
     target_compile_options(OP_level_1 PRIVATE -O0)
