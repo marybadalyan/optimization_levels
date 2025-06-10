@@ -74,28 +74,27 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest --build-config ${{ matrix.build_type }}
 
-    - name: Run Executable
+    - name: Run Executables
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       shell: bash
       run: |
-        # Set executable name based on OS
-        executable="Optimization_levels"  # Start with base executable name
+        # Define array of executables (without extension)
+        executables=("OP_level_1" "OP_level_2")
 
-        if [ "$RUNNER_OS" == "Windows" ]; then
-          executable="Optimization_levels.exe"  # Add .exe for Windows
-          # On Windows, we should ensure that we run in the correct directory
-          executable_path="${{ github.workspace }}\\build\\${{ matrix.build_type }}\\$executable"   
-        else
-          executable_path="${{ github.workspace }}/build/$executable"  # For Linux/Ubuntu
-        fi
+        for exe in "${executables[@]}"; do
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            executable="${exe}.exe"
+            executable_path="${{ github.workspace }}\\build\\${{ matrix.build_type }}\\$executable"
+          else
+            executable_path="${{ github.workspace }}/build/$executable"
+          fi
 
-        # Check if the file exists before trying to run it
-        echo "Checking if executable exists: $executable_path"
-        if [ -f "$executable_path" ]; then
-          echo "Executable found, running it"
-          # Run executable based on the platform
-          "$executable_path" 
-        else
-          echo "Executable not found: $executable_path"
-          exit 1  # Fail if the executable isn't found
-        fi
+          echo "Checking if executable exists: $executable_path"
+          if [ -f "$executable_path" ]; then
+            echo "Running $executable_path"
+            "$executable_path"
+          else
+            echo "Executable not found: $executable_path"
+            exit 1
+          fi
+        done
