@@ -18,7 +18,7 @@ int run(){
     return 0;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
     
     auto start = std::chrono::high_resolution_clock::now();
     run();
@@ -26,9 +26,16 @@ int main() {
     std::chrono::duration<double> elapsed = end - start;
 
 
+    if (argc < 2) {
+        std::cerr << "Error: Please provide the path to the assembly file as an argument.\n";
+        return 1;
+    }
+    std::string assemblyFilePath = argv[1];
+    std::cout << "Assembly file path: " << assemblyFilePath << "\n";
+
     std::cout << "Time: " << elapsed.count() << " seconds\n";
 
-    std::ifstream asmFile("build\\analysis\\assembly.txt");
+    std::ifstream asmFile(assemblyFilePath);
     if (!asmFile) {
         std::cerr << "Failed to open file\n";
         return 1;

@@ -95,8 +95,10 @@ jobs:
           # Determine the executable name based on the runner's OS
           if [ "$RUNNER_OS" == "Windows" ]; then
             executable_name="${{ matrix.build_type }}/${exe}.exe"
+            ANALYSIS_PATH="analysis/assembly.txt"
           else
             executable_name="${exe}"
+             ANALYSIS_PATH="analysis/assembly.txt"
           fi
 
           echo "Checking for executable: ${executable_name}"
@@ -104,7 +106,7 @@ jobs:
           # Check if the executable exists in the current directory
           if [ -f "${executable_name}" ]; then
             echo "Running ./${executable_name}"
-            "./${executable_name}"
+            "./${executable_name}" "${ANALYSIS_PATH}"
           else
             echo "Error: Executable not found in working directory."
             exit 1
