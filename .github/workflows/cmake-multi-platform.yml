@@ -84,43 +84,50 @@ jobs:
         echo "--------------------------------------------------------------------"
 
 
-    - name: Run Executables
+    - name: Run Executables and Analyze
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       shell: bash
       run: |
-        # Define parallel arrays for executables and their analysis files
         executables=("OP_level_1" "OP_level_2")
-        paths=("analysis/assembly_O0.txt" "analysis/assembly_O2.txt") # Base paths
 
-        # Loop using the array indices (0, 1, 2...)
-        for i in "${!executables[@]}"; do
-        
-          # --- Step 1: Get the current items from the arrays using the index ---
-          exe="${executables[$i]}"
-          ANALYSIS_PATH="${paths[$i]}"
+        for exe in "${executables[@]}"; do
+          # --- Setup variables for this executable ---
+          executable_name=""
+          analysis_file=""
+          opt_level=""
 
-          # --- Step 2: Set the platform-specific executable name ---
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            executable_name="${{ matrix.build_type }}/${exe}.exe"
-            # On Windows, our CMake script names the unoptimized file "assembly_Od.txt"
-            # So we need to correct the path for that specific case.
-            if [ "$exe" == "OP_level_1" ]; then
-              ANALYSIS_PATH="analysis/assembly_Od.txt"
+          if [ "$exe" == "OP_level_1" ]; then
+            opt_level="-O0" # Base optimization level name
+            if [ "$RUNNER_OS" == "Windows" ]; then
+              executable_name="${{ matrix.build_type }}/${exe}.exe"
+              analysis_file="assembly_Od.txt"
+              opt_level="/Od" # Windows-specific flag name
+            else
+              executable_name="${exe}"
+              analysis_file="assembly_O0.txt"
             fi
-          else
-            executable_name="${exe}"
+          elif [ "$exe" == "OP_level_2" ];
+          then
+            opt_level="-O2"
+            if [ "$RUNNER_OS" == "Windows" ]; then
+              executable_name="${{ matrix.build_type }}/${exe}.exe"
+            else
+              executable_name="${exe}"
+            fi
+            analysis_file="assembly_O2.txt"
           fi
+          
+          ANALYSIS_PATH="analysis/${analysis_file}"
 
-          echo "---------------------------------"
-          echo "Executable: ${executable_name}"
-          echo "Analysis Path: ${ANALYSIS_PATH}"
-
-          # --- Step 3: Check for and run the executable ---
+          echo "--------------------------------------------------"
+          echo "Running ${exe}..."
+          
+          # --- Run the executable with all required arguments ---
           if [ -f "${executable_name}" ]; then
-            echo "Running..."
-            "./${executable_name}" "${ANALYSIS_PATH}"
+            # Pass the analysis path (ARG 1) and optimization level (ARG 2)
+            "./${executable_name}" "${ANALYSIS_PATH}" "${opt_level}"
           else
-            echo "Error: Executable not found in working directory: $(pwd)/${executable_name}"
+            echo "Error: Executable not found: $(pwd)/${executable_name}"
             exit 1
           fi
         done
