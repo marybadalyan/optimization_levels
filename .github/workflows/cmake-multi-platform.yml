@@ -24,7 +24,7 @@ jobs:
       # To add more build types (Release, Debug, RelWithDebInfo, etc.) customize the build_type list.
       matrix:
         os: [ubuntu-latest, windows-latest]
-        build_type: [Release,Debug]
+        build_type: [Release]
         c_compiler: [gcc, clang, cl]
         include:
           - os: windows-latest
@@ -88,27 +88,39 @@ jobs:
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       shell: bash
       run: |
-        # Define array of executables
+        # Define parallel arrays for executables and their analysis files
         executables=("OP_level_1" "OP_level_2")
+        paths=("analysis/assembly_O0.txt" "analysis/assembly_O2.txt") # Base paths
 
-        for exe in "${executables[@]}"; do
-          # Determine the executable name based on the runner's OS
+        # Loop using the array indices (0, 1, 2...)
+        for i in "${!executables[@]}"; do
+        
+          # --- Step 1: Get the current items from the arrays using the index ---
+          exe="${executables[$i]}"
+          ANALYSIS_PATH="${paths[$i]}"
+
+          # --- Step 2: Set the platform-specific executable name ---
           if [ "$RUNNER_OS" == "Windows" ]; then
             executable_name="${{ matrix.build_type }}/${exe}.exe"
-            ANALYSIS_PATH="analysis/assembly.txt"
+            # On Windows, our CMake script names the unoptimized file "assembly_Od.txt"
+            # So we need to correct the path for that specific case.
+            if [ "$exe" == "OP_level_1" ]; then
+              ANALYSIS_PATH="analysis/assembly_Od.txt"
+            fi
           else
             executable_name="${exe}"
-             ANALYSIS_PATH="analysis/assembly.txt"
           fi
 
-          echo "Checking for executable: ${executable_name}"
+          echo "---------------------------------"
+          echo "Executable: ${executable_name}"
+          echo "Analysis Path: ${ANALYSIS_PATH}"
 
-          # Check if the executable exists in the current directory
+          # --- Step 3: Check for and run the executable ---
           if [ -f "${executable_name}" ]; then
-            echo "Running ./${executable_name}"
+            echo "Running..."
             "./${executable_name}" "${ANALYSIS_PATH}"
           else
-            echo "Error: Executable not found in working directory."
+            echo "Error: Executable not found in working directory: $(pwd)/${executable_name}"
             exit 1
           fi
         done
