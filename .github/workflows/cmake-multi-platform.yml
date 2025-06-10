@@ -85,7 +85,7 @@ jobs:
 
 
     - name: Run Executables
-      working-directory: ${{ steps.strings.outputs.build-output-dir }}/${{ matrix.build_type }}
+      working-directory: ${{ steps.strings.outputs.build-output-dir }}
       shell: bash
       run: |
         # Define array of executables
@@ -94,9 +94,9 @@ jobs:
         for exe in "${executables[@]}"; do
           # Determine the executable name based on the runner's OS
           if [ "$RUNNER_OS" == "Windows" ]; then
-            executable_name="${exe}.exe"
+            executable_name="${{ matrix.build_type }}/${exe}.exe"
           else
-            executable_name="${exe}"
+            executable_name="${exe}.exe"
           fi
 
           echo "Checking for executable: ${executable_name}"
