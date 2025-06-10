@@ -74,6 +74,17 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest --build-config ${{ matrix.build_type }}
 
+    - name: Debug Directory Structure
+      working-directory: ${{ steps.strings.outputs.build-output-dir }}
+      shell: bash
+      run: |
+        echo "Listing build directory contents:"
+        if [ "$RUNNER_OS" == "Windows" ]; then
+          find "${{ steps.strings.outputs.build-output-dir }}" -type f
+        else
+          ls -R "${{ steps.strings.outputs.build-output-dir }}"
+        fi
+
     - name: Run Executables
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       shell: bash
@@ -84,9 +95,9 @@ jobs:
         for exe in "${executables[@]}"; do
           if [ "$RUNNER_OS" == "Windows" ]; then
             executable="${exe}.exe"
-            executable_path="${{ github.workspace }}\\build\\${{ matrix.build_type }}\\$executable"
+            executable_path="${{ steps.strings.outputs.build-output-dir }}/${{ matrix.build_type }}/${executable}"
           else
-            executable_path="${{ github.workspace }}/build/$executable"
+            executable_path="${{ steps.strings.outputs.build-output-dir }}/${exe}"
           fi
 
           echo "Checking if executable exists: $executable_path"

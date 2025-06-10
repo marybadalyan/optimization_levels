@@ -57,7 +57,7 @@ int main() {
     }
     asmFile.close();
 
-    std::cout << "Total instructions in run() function compiled in O2: " << count << "\n";
+    std::cout << "Total instructions in run() function compiled: " << count << "\n";
 
     return 0;
 }
