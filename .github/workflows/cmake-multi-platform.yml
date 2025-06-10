@@ -45,89 +45,120 @@ jobs:
             c_compiler: cl
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set reusable strings
-      # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
-      id: strings
-      shell: bash
-      run: |
-        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+      - name: Set reusable strings
+        # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
+        id: strings
+        shell: bash
+        run: |
+          echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
-    - name: Configure CMake
-      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
-      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: >
-        cmake -B ${{ steps.strings.outputs.build-output-dir }}
-        -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
-        -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
-        -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
-        -S ${{ github.workspace }}
+      - name: Configure CMake
+        # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
+        # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+        run: >
+          cmake -B ${{ steps.strings.outputs.build-output-dir }}
+          -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
+          -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
+          -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+          -S ${{ github.workspace }}
 
-    - name: Build
-      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
-      run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
+      - name: Build
+        # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+        run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
-    - name: Test
-      working-directory: ${{ steps.strings.outputs.build-output-dir }}
-      # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
-      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      run: ctest --build-config ${{ matrix.build_type }}
-  
-    - name: Debug - List ALL Files in Workspace
-      # This runs even if the build step failed, so you can see the state of the file system
-      if: always()
-      shell: bash
-      run: |
-        echo "--- Listing ALL files in the entire workspace (${{ github.workspace }}) ---"
-        ls -R "${{ github.workspace }}"
-        echo "--------------------------------------------------------------------"
+      - name: Test
+        working-directory: ${{ steps.strings.outputs.build-output-dir }}
+        # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+        # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+        run: ctest --build-config ${{ matrix.build_type }}
 
+      - name: Debug - List ALL Files in Workspace
+        # This runs even if the build step failed, so you can see the state of the file system
+        if: always()
+        shell: bash
+        run: |
+          echo "--- Listing ALL files in the entire workspace (${{ github.workspace }}) ---"
+          ls -R "${{ github.workspace }}"
+          echo "--------------------------------------------------------------------"
 
-    - name: Run Executables and Analyze
-      working-directory: ${{ steps.strings.outputs.build-output-dir }}
-      shell: bash
-      run: |
-        executables=("OP_level_1" "OP_level_2")
+      - name: Debug Linux Build Output
+        if: runner.os == 'Linux'
+        working-directory: ${{ steps.strings.outputs.build-output-dir }}
+        shell: bash
+        run: |
+          echo "--- 1. Verifying what files exist and their sizes ---"
+          ls -R .
+          echo "---"
+          echo "Line count of generated assembly files:"
+          wc -l analysis/assembly_O0.txt || echo "assembly_O0.txt not found"
+          wc -l analysis/assembly_O2.txt || echo "assembly_O2.txt not found"
 
-        for exe in "${executables[@]}"; do
-          # --- Setup variables for this executable ---
-          executable_name=""
-          analysis_file=""
-          opt_level=""
+          echo "--- 2. Checking if objdump is available ---"
+          which objdump
 
-          if [ "$exe" == "OP_level_1" ]; then
-            opt_level="-O0" # Base optimization level name
-            if [ "$RUNNER_OS" == "Windows" ]; then
-              executable_name="${{ matrix.build_type }}/${exe}.exe"
-              analysis_file="assembly_Od.txt"
-              opt_level="/Od" # Windows-specific flag name
-            else
-              executable_name="${exe}"
-              analysis_file="assembly_O0.txt"
+          echo "--- 3. Verifying the executable file type ---"
+          file OP_level_1
+          file OP_level_2
+
+          echo "--- 4. Manually re-running the objdump command ---"
+          echo "Attempting to generate assembly for OP_level_1 (-O0)..."
+          objdump -d -M intel OP_level_1 > manual_O0_test.txt
+          echo "objdump exit code: $?"
+          echo "Size of manually generated file:"
+          ls -lh manual_O0_test.txt
+
+          echo "---"
+          echo "Attempting to generate assembly for OP_level_2 (-O2)..."
+          objdump -d -M intel OP_level_2 > manual_O2_test.txt
+          echo "objdump exit code: $?"
+          echo "Size of manually generated file:"
+          ls -lh manual_O2_test.txt
+
+      - name: Run Executables and Analyze
+        working-directory: ${{ steps.strings.outputs.build-output-dir }}
+        shell: bash
+        run: |
+          executables=("OP_level_1" "OP_level_2")
+
+          for exe in "${executables[@]}"; do
+            # --- Setup variables for this executable ---
+            executable_name=""
+            analysis_file=""
+            opt_level=""
+
+            if [ "$exe" == "OP_level_1" ]; then
+              opt_level="-O0" # Base optimization level name
+              if [ "$RUNNER_OS" == "Windows" ]; then
+                executable_name="${{ matrix.build_type }}/${exe}.exe"
+                analysis_file="assembly_Od.txt"
+                opt_level="/Od" # Windows-specific flag name
+              else
+                executable_name="${exe}"
+                analysis_file="assembly_O0.txt"
+              fi
+            elif [ "$exe" == "OP_level_2" ]; then
+              opt_level="-O2"
+              if [ "$RUNNER_OS" == "Windows" ]; then
+                executable_name="${{ matrix.build_type }}/${exe}.exe"
+              else
+                executable_name="${exe}"
+              fi
+              analysis_file="assembly_O2.txt"
             fi
-          elif [ "$exe" == "OP_level_2" ];
-          then
-            opt_level="-O2"
-            if [ "$RUNNER_OS" == "Windows" ]; then
-              executable_name="${{ matrix.build_type }}/${exe}.exe"
-            else
-              executable_name="${exe}"
-            fi
-            analysis_file="assembly_O2.txt"
-          fi
-          
-          ANALYSIS_PATH="analysis/${analysis_file}"
 
-          echo "--------------------------------------------------"
-          echo "Running ${exe}..."
-          
-          # --- Run the executable with all required arguments ---
-          if [ -f "${executable_name}" ]; then
-            # Pass the analysis path (ARG 1) and optimization level (ARG 2)
-            "./${executable_name}" "${ANALYSIS_PATH}" "${opt_level}"
-          else
-            echo "Error: Executable not found: $(pwd)/${executable_name}"
-            exit 1
-          fi
-        done
+            ANALYSIS_PATH="analysis/${analysis_file}"
+
+            echo "--------------------------------------------------"
+            echo "Running ${exe}..."
+
+            # --- Run the executable with all required arguments ---
+            if [ -f "${executable_name}" ]; then
+              # Pass the analysis path (ARG 1) and optimization level (ARG 2)
+              "./${executable_name}" "${ANALYSIS_PATH}" "${opt_level}"
+            else
+              echo "Error: Executable not found: $(pwd)/${executable_name}"
+              exit 1
+            fi
+          done
