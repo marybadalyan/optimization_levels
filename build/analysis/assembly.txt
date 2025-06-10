@@ -2921,7 +2921,7 @@ main:
   0000000000000092: 44 89 74 24 20     mov         dword ptr [rsp+20h],r14d
   0000000000000097: 41 B9 40 00 00 00  mov         r9d,40h
   000000000000009D: 45 8B C6           mov         r8d,r14d
-  00000000000000A0: 48 8D 15 00 00 00  lea         rdx,[??_C@_0BG@IPDEPNCM@analysis?2assembly?4txt@]
+  00000000000000A0: 48 8D 15 00 00 00  lea         rdx,[??_C@_0BM@CAOKLEJI@build?2analysis?2assembly?4txt@]
                     00
   00000000000000A7: 48 8D 4C 24 40     lea         rcx,[rsp+40h]
   00000000000000AC: E8 00 00 00 00     call        ??0?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAA@PEBDHH@Z
@@ -3139,7 +3139,7 @@ main$dtor$1:
           A0 .debug$S
          13D .drectve
          33C .pdata
-         22E .rdata
+         234 .rdata
          4CC .rdata$r
         26E4 .text$mn
          1A2 .text$x

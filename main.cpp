@@ -28,7 +28,7 @@ int main() {
 
     std::cout << "Time: " << elapsed.count() << " seconds\n";
 
-    std::ifstream asmFile("analysis\\assembly.txt");
+    std::ifstream asmFile("build\\analysis\\assembly.txt");
     if (!asmFile) {
         std::cerr << "Failed to open file\n";
         return 1;
