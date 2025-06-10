@@ -74,14 +74,15 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest --build-config ${{ matrix.build_type }}
   
-    - name: Debug - List Files in Build Directory
+    - name: Debug - List ALL Files in Workspace
+      # This runs even if the build step failed, so you can see the state of the file system
+      if: always()
       shell: bash
       run: |
-        echo "The working directory for the next step will be: ${{ steps.strings.outputs.build-output-dir }}"
-        echo "---"
-        echo "Listing contents of that directory:"
-        ls -R "${{ steps.strings.outputs.build-output-dir }}"
-        echo "---"
+        echo "--- Listing ALL files in the entire workspace (${{ github.workspace }}) ---"
+        ls -R "${{ github.workspace }}"
+        echo "--------------------------------------------------------------------"
+
 
     - name: Run Executables
       working-directory: ${{ steps.strings.outputs.build-output-dir }}/${{ matrix.build_type }}
