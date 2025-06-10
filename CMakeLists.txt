@@ -10,7 +10,6 @@ else()
     add_compile_options(-O2)
 endif()
 
-set(DUMPBIN_EXE "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/dumpbin.exe")
 
 add_executable(Optimization_levels main.cpp)
 
@@ -19,16 +18,17 @@ if(MSVC)
     add_custom_target(dumpbin_info ALL
         COMMAND ${CMAKE_COMMAND} -E echo "Dumping PE + OBJ info (MSVC)"
         
-        # Dumpbin on executable
-        COMMAND cmd /c "dumpbin /DISASM \"$<TARGET_FILE:Optimization_levels>\" > \"${CMAKE_BINARY_DIR}/analysis/assembly.txt\""
+        # Dumpbin on obj file
+        COMMAND cmd /c "dumpbin /DISASM \"${CMAKE_BINARY_DIR}\\Optimization_levels.dir\\Release\\main.obj\" > \"${CMAKE_BINARY_DIR}\\analysis\\assembly.txt\""
         DEPENDS Optimization_levels
     )
 else()
     add_custom_command(
         OUTPUT ${CMAKE_BINARY_DIR}/analysis/assembly.txt
         COMMAND ${CMAKE_COMMAND} -E echo "Dumping ELF info (Unix)"
-        COMMAND -d -M intel "$<TARGET_FILE:Optimization_levels>" > "${CMAKE_BINARY_DIR}/analysis/assembly.txt"
+        COMMAND objdump -d -M intel "$<TARGET_FILE:Optimization_levels>" > "${CMAKE_BINARY_DIR}/analysis/assembly.txt"
         DEPENDS Optimization_levels
 
     )
 endif()
+
