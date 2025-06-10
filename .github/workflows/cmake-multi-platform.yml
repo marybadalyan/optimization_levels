@@ -89,23 +89,25 @@ jobs:
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       shell: bash
       run: |
-        # Define array of executables (without extension)
+        # Define array of executables
         executables=("OP_level_1" "OP_level_2")
 
         for exe in "${executables[@]}"; do
+          # Determine the executable name based on the runner's OS
           if [ "$RUNNER_OS" == "Windows" ]; then
-            executable="${exe}.exe"
-            executable_path="${{ github.workspace }}\\build\\${{ matrix.build_type }}\\$executable"
+            executable_name="${exe}.exe"
           else
-            executable_path="${{ github.workspace }}/build/$executable"  # For Linux/Ubuntu
+            executable_name="${exe}"
           fi
 
-          echo "Checking if executable exists: $executable_path"
-          if [ -f "$executable_path" ]; then
-            echo "Running $executable_path"
-            "$executable_path"
+          echo "Checking for executable: ${executable_name}"
+
+          # Check if the executable exists in the current directory
+          if [ -f "${executable_name}" ]; then
+            echo "Running ./${executable_name}"
+            "./${executable_name}"
           else
-            echo "Executable not found: $executable_path"
+            echo "Error: Executable not found in working directory."
             exit 1
           fi
         done
