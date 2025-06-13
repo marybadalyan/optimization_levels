@@ -147,8 +147,8 @@ Note: The instruction count for -O2 may sometimes be higher due to techniques li
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
-cd <repository-directory>
+git clone <optimization_levels>
+cd <optimization_levels>
 ```
 
 Configure the project using CMake:
@@ -167,24 +167,14 @@ cmake --build build
 Run the analysis:
 The final executables need to be run from the build directory. You must provide the path to the assembly file and the optimization level string as arguments.
 
-On Linux (or macOS):
-
-# Run the unoptimized version
-
-```bash
-./build/OP_level_1 ./build/analysis/assembly_O0.txt "-O0"
-```
-# Run the optimized version
-```bash
-./build/OP_level_2 ./build/analysis/assembly_O2.txt "-O2"
-```
-On Windows (in a command prompt):
-
-# Run the unoptimized version
-```bash
-.\build\Release\OP_level_1.exe .\build\analysis\assembly_Od.txt "/Od"
 
 # Run the optimized version
-.\build\Release\OP_level_2.exe .\build\analysis\assembly_O2.txt "/O2"
+
+```bash
+./build/Release/inlining_test.exe  build//analysis//assembly_Release.txt O2
+```
+# Run the unoptimized version
+```bash
+./build/Debug/inlining_test.exe  build//analysis//assembly_Debug.txt Od
 ```
 You will see the colored output in your terminal, comparing the performance and code size of the two optimization levels.
